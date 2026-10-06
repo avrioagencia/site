@@ -4,12 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Agência Ávrio — Preparando ideias para o amanhã</title>
-<meta name="description" content="A Ávrio transforma quem já é bom no que faz em referência também na internet. Você só grava — a gente cuida de todo o resto.">
+<meta name="description" content="A Ávrio cria o seu avatar digital e produz 15 reels por mês para transformar quem já é bom no que faz em referência também na internet.">
 <link rel="icon" href="assets/avrio-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="lead.css">
+<!-- Configuração do formulário: preencha SHEETS_URL (Apps Script) e PIXEL_ID (Meta) quando tiver. -->
+<script>
+window.AVRIO = {
+  WHATSAPP: '5563984600461',
+  SHEETS_URL: 'https://script.google.com/macros/s/AKfycbyh2CPU4ocPAQhdX-Xh3INMvzzA-BtxgQ8ARyvERZBoJMWDKGtWfdQ6tuEmJ36TgYO3/exec',   // Web App do Google Apps Script
+  PIXEL_ID: ''      // ID do Pixel da Meta
+};
+</script>
 </head>
 <body>
 
@@ -26,7 +35,8 @@
       <a href="#publico"><span>Para quem</span></a>
       <a href="#ia"><span>Tecnologia</span></a>
       <a href="#oferta"><span>Planos</span></a>
-      <a href="#contato" class="nav-cta">Começar agora</a>
+      <a href="#faq"><span>Dúvidas</span></a>
+      <button type="button" class="nav-cta" data-open-form="header">Começar agora</button>
     </nav>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -37,7 +47,7 @@
   <div class="hero-bg"></div>
   <div class="wrap">
     <div class="hero-inner">
-      <span class="eyebrow reveal in">Agência AI-First</span>
+      <span class="eyebrow reveal in">Agência AI-First · Todo o Brasil</span>
       <h1>
         <span class="reveal in">Sua autoridade</span>
         <span class="grad reveal in d1">
@@ -46,9 +56,10 @@ não pode esperar</span>
       </h1>
       <p class="lead reveal in d3">Você é excelente no que faz — mas o seu Instagram não conta isso. A Ávrio transforma quem já é bom no que faz em <strong style="color:var(--text)">referência também na internet.</strong></p>
       <div class="hero-actions reveal in d4">
-        <a href="#oferta" class="btn btn-primary">Quero ser referência<span class="arrow">→</span></a>
+        <button type="button" class="btn btn-primary" data-open-form="hero">Quero ser referência <span class="arrow">→</span></button>
         <a href="#metodo" class="btn btn-ghost">Como funciona</a>
       </div>
+      <p class="hero-note reveal in d4">15 reels por mês · seu avatar digital · R$&nbsp;1.500/mês</p>
     </div>
   </div>
   <div class="scroll-cue"><span>Role</span><span class="line"></span></div>
@@ -101,7 +112,7 @@ não pode esperar</span>
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="eyebrow">Como funciona</span>
-      <h2>Criamos seu avatar, <span class="grad">e gente cuida de todo o resto.</span></h2>
+      <h2>Criamos seu avatar, <span class="grad">e a gente cuida de todo o resto.</span></h2>
     </div>
     <div class="steps">
       <div class="step reveal">
@@ -112,12 +123,12 @@ não pode esperar</span>
       <div class="step reveal d1">
         <div class="sn">PASSO 02</div>
         <h3>Roteirizamos</h3>
-        <p>Criamos roteiros com alto potencial de viralização para alcançar milhares de views.</p>
+        <p>Criamos roteiros estratégicos, pensados para prender a atenção e posicionar você como referência.</p>
       </div>
       <div class="step feature reveal d2">
         <div class="sn">PASSO 03</div>
         <h3>Editamos</h3>
-        <p>Editamos o seu vídeo com uma edição dinâmica focando sempre na viralização do conteúdo.</p>
+        <p>Editamos cada vídeo com ritmo dinâmico, legendas e identidade visual, prontos para publicar.</p>
       </div>
       <div class="step reveal d3">
         <div class="sn">PASSO 04</div>
@@ -153,14 +164,28 @@ não pode esperar</span>
       <h2>Tudo o que o seu perfil precisa, <span class="grad">todo mês.</span></h2>
     </div>
     <div class="deliv">
-      <div class="dcard reveal"><div class="num grad">Clone</div><h3>Seu avatar digital</h3><p>Seu clone digital fará tudo por você.</p></div>
-      <div class="dcard reveal d1"><div class="num grad">60</div><h3>Reels</h3><p>Vídeos curtos que constroem autoridade.</p></div>
-      <div class="dcard reveal d2"><div class="num grad">+<span style="font-size:24px;"></span></div><h3>Relatório de desempenho
-</h3><p>Dados claros do que está funcionando.
-</p></div>
+      <div class="dcard reveal"><div class="num grad">Clone</div><h3>Seu avatar digital</h3><p>Criado a partir da sua foto e da sua voz.</p></div>
+      <div class="dcard reveal d1"><div class="num grad">15</div><h3>Reels por mês</h3><p>Roteirizados, editados e postados, com revisão humana.</p></div>
+      <div class="dcard reveal d2"><div class="num grad">+</div><h3>Relatório de desempenho</h3><p>Dados claros do que está funcionando.</p></div>
     </div>
   </div>
 </section>
+
+<!-- ============ DEMONSTRAÇÃO (ative quando tiver o vídeo) ============
+<section class="sec demo" id="demo">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">Veja na prática</span>
+      <h2>Um avatar <span class="grad">que fala por você.</span></h2>
+    </div>
+    <div class="demo-frame reveal d1">
+      <video controls playsinline preload="metadata" poster="assets/demo-poster.jpg">
+        <source src="assets/demo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+-->
 
 <!-- ============ PARA QUEM É ============ -->
 <section class="sec audience" id="publico">
@@ -192,7 +217,7 @@ não pode esperar</span>
     <div class="ai-grid">
       <div class="reveal">
         <span class="eyebrow">Por que AI-first</span>
-        <h2 style="font-size:clamp(30px,4.5vw,52px); margin:18px 0 22px;">Tecnologia para entregar mais, mais rápido, sem perder o toque humano.</h2>
+        <h2 style="font-size:clamp(30px,4.5vw,52px); margin:18px 0 22px;">Tecnologia para entregar mais, mais rápido, sem perder o toque humano.</h2>
         <p class="lead">A Ávrio usa inteligência artificial em cada etapa: pesquisa, planejamento, roteiro e produção. Mais velocidade, mais consistência e um preço justo.</p>
         <div class="ai-stats">
           <div class="stat"><div class="v grad">4 etapas</div><div class="l">com IA do início ao fim</div></div>
@@ -218,18 +243,60 @@ não pode esperar</span>
       <span class="eyebrow center">A oferta</span>
       <h2 style="font-size:clamp(30px,4.5vw,52px); margin-top:18px;">Plano único. <span class="grad">Sem complicação.</span></h2>
       <div class="price">
-        <span class="v grad">R$&nbsp;1000</span>
+        <span class="v grad">R$&nbsp;1.500</span>
         <span class="per">/mês</span>
       </div>
       <p class="lead" style="max-width:560px; margin:0 auto;">Todo o fluxo criativo, do planejamento à publicação — em um único plano transparente.</p>
-      <!--<div class="founder-badge">
-        <span class="tag">CONDIÇÃO POR TEMPO LIMITADO</span>
-        <p>Para os <strong style="color:var(--glow)">5 primeiros clientes</strong> da Ávrio: <strong>setup gratuito</strong> — criação de identidade visual.</p>
-      </div>-->
-      <div class="seats" title="5 vagas de fundador">
-        <span class="seat open"></span><span class="seat open"></span><span class="seat open"></span><span class="seat open"></span><span class="seat open"></span>
-      </div>
-      <div style="margin-top:34px;"><a href="#contato" class="btn btn-primary">Construir minha autoridade agora →</a></div>
+      <ul class="offer-list">
+        <li>Seu avatar digital (foto + voz)</li>
+        <li>15 reels por mês</li>
+        <li>Roteiros estratégicos</li>
+        <li>Edição, legendas e postagem</li>
+        <li>Relatório de desempenho</li>
+        <li>Revisão humana em 100% das peças</li>
+      </ul>
+      <div style="margin-top:34px;"><button type="button" class="btn btn-primary" data-open-form="oferta">Construir minha autoridade agora <span class="arrow">→</span></button></div>
+      <p class="offer-foot">Atendimento 100% online, para todo o Brasil.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">Dúvidas</span>
+      <h2>Perguntas <span class="grad">frequentes.</span></h2>
+    </div>
+    <div class="faq-list reveal d1">
+      <details>
+        <summary>Vai parecer um robô?</summary>
+        <p>O avatar é criado a partir da sua foto e da sua voz, e toda peça passa por revisão humana antes de ir ao ar, para garantir que o conteúdo soe como você.</p>
+      </details>
+      <details>
+        <summary>Preciso gravar vídeos todo mês?</summary>
+        <p>Não. Você participa só no início: uma foto e alguns minutos de gravação da sua voz. Depois disso, a gente cuida de roteiro, edição e postagem.</p>
+      </details>
+      <details>
+        <summary>Minha imagem e minha voz ficam seguras?</summary>
+        <p>Sua imagem e sua voz são usadas apenas para produzir os seus conteúdos, com autorização expressa formalizada em contrato.</p>
+      </details>
+      <details>
+        <summary>E as regras de publicidade da minha profissão?</summary>
+        <p>Trabalhamos com conteúdo educativo e informativo, sem promessa de resultado, e nenhuma peça é publicada sem revisão.</p>
+      </details>
+      <details>
+        <summary>Quantos conteúdos eu recebo por mês?</summary>
+        <p>São 15 reels por mês, mais um relatório de desempenho para você acompanhar o que está funcionando.</p>
+      </details>
+      <details>
+        <summary>Vocês atendem a minha cidade?</summary>
+        <p>Sim. O atendimento é 100% online e atendemos profissionais de todo o Brasil.</p>
+      </details>
+      <details>
+        <summary>Como eu começo?</summary>
+        <p>Preencha o formulário rápido. Em seguida, chamamos você no WhatsApp para entender o seu momento e alinhar os próximos passos.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -241,7 +308,8 @@ não pode esperar</span>
     <img src="assets/avrio-icon.png" alt="" style="width:72px; border-radius:18px; margin:0 auto 28px;" class="reveal">
     <h2 class="reveal d1">Vamos preparar as ideias do <span class="grad">amanhã do seu negócio?</span></h2>
     <div class="cta-contacts reveal d2">
-      <a href="https://wa.me/5563984600461" class="btn btn-primary">WhatsApp <span class="arrow">→</span></a>
+      <button type="button" class="btn btn-primary" data-open-form="cta">Quero começar <span class="arrow">→</span></button>
+      <a href="https://wa.me/5563984600461" class="btn btn-ghost" data-wa="cta">WhatsApp</a>
       <a href="https://instagram.com/avrio.agencia" class="btn btn-ghost">@avrio.agencia</a>
       <a href="mailto:agenciaavrio@gmail.com" class="btn btn-ghost">agenciaavrio@gmail.com</a>
     </div>
@@ -257,12 +325,121 @@ não pode esperar</span>
       <a href="#entregaveis">Entregáveis</a>
       <a href="#publico">Para quem</a>
       <a href="#oferta">Planos</a>
+      <a href="#faq">Dúvidas</a>
       <a href="#contato">Contato</a>
     </nav>
     <div class="tagline">Preparando ideias para o amanhã</div>
   </div>
 </footer>
 
+<!-- ============ BOTÃO FLUTUANTE WHATSAPP ============ -->
+<a class="wa-float" id="waFloat" href="https://wa.me/5563984600461?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20%C3%81vrio%20e%20quero%20saber%20mais%20sobre%20o%20plano." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" data-wa="float">
+  <span class="wa-tip">Fale com a gente</span>
+  <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.11.56 4.17 1.62 5.98L4 28l7.25-1.9a12.1 12.1 0 0 0 4.79 1c6.64 0 12.04-5.37 12.04-11.97C28.08 8.36 22.68 3 16.04 3Zm0 21.9a10 10 0 0 1-5.1-1.4l-.37-.22-4.3 1.13 1.15-4.17-.24-.38a9.8 9.8 0 0 1-1.5-5.2c0-5.44 4.46-9.87 9.96-9.87 5.5 0 9.96 4.43 9.96 9.87 0 5.44-4.46 9.88-9.96 9.88Zm5.46-7.4c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.63-.93-2.24-.24-.58-.5-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1-1.04 2.46 0 1.45 1.07 2.86 1.22 3.06.15.2 2.1 3.2 5.08 4.48.71.3 1.27.49 1.7.62.72.23 1.37.2 1.88.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
+</a>
+
+<!-- ============ BARRA FIXA (mobile) ============ -->
+<div class="sticky-cta" id="stickyCta">
+  <button type="button" class="btn btn-primary" data-open-form="sticky">Quero ser referência <span class="arrow">→</span></button>
+</div>
+
+<!-- ============ MODAL DO FORMULÁRIO ============ -->
+<div class="lf-overlay" id="lfOverlay" hidden>
+  <div class="lf-panel" role="dialog" aria-modal="true" aria-labelledby="lfTitle">
+    <button type="button" class="lf-close" id="lfClose" aria-label="Fechar">×</button>
+    <div class="lf-progress" aria-hidden="true"><span id="lfBar"></span></div>
+    <div class="lf-meta"><span id="lfCount">Passo 1 de 6</span></div>
+    <form id="lfForm" novalidate autocomplete="on">
+      <input type="text" name="empresa" id="lfHp" tabindex="-1" autocomplete="off" aria-hidden="true" class="lf-hp">
+
+      <section class="lf-step" data-step="1">
+        <h3 id="lfTitle">Você é excelente no que faz. <span class="grad">Hora de o seu Instagram provar isso.</span></h3>
+        <p class="lf-sub">Responda 6 perguntas rápidas (menos de 1 minuto) e veja como ter o seu avatar digital e 15 reels por mês.</p>
+        <label class="lf-field"><span>Seu nome</span>
+          <input type="text" name="nome" id="lfNome" placeholder="Nome e sobrenome" autocomplete="name" required>
+        </label>
+        <label class="lf-field"><span>WhatsApp (com DDD)</span>
+          <input type="tel" name="whatsapp" id="lfWhats" placeholder="(00) 00000-0000" inputmode="tel" autocomplete="tel" required>
+        </label>
+        <p class="lf-legal">Ao continuar, você autoriza a Ávrio a usar esses dados para entrar em contato sobre o seu atendimento (LGPD).</p>
+        <p class="lf-err" role="alert"></p>
+      </section>
+
+      <section class="lf-step" data-step="2" hidden>
+        <h3>Qual é a sua área de atuação?</h3>
+        <div class="lf-options" data-name="nicho">
+          <button type="button" data-v="Dentista">Dentista</button>
+          <button type="button" data-v="Estética">Estética</button>
+          <button type="button" data-v="Nutricionista">Nutricionista</button>
+          <button type="button" data-v="Advogado(a)">Advogado(a)</button>
+          <button type="button" data-v="Psicólogo(a)">Psicólogo(a)</button>
+          <button type="button" data-v="Personal trainer">Personal trainer</button>
+          <button type="button" data-v="Outra área">Outra área</button>
+        </div>
+        <p class="lf-err" role="alert"></p>
+      </section>
+
+      <section class="lf-step" data-step="3" hidden>
+        <h3>Qual é o seu Instagram?</h3>
+        <p class="lf-sub">Assim a gente já olha o seu perfil antes de conversar.</p>
+        <label class="lf-field"><span>@ do perfil</span>
+          <input type="text" name="instagram" id="lfInsta" placeholder="@seuperfil" autocomplete="off" autocapitalize="none">
+        </label>
+        <button type="button" class="lf-link" id="lfNoInsta">Ainda não tenho Instagram profissional</button>
+        <p class="lf-err" role="alert"></p>
+      </section>
+
+      <section class="lf-step" data-step="4" hidden>
+        <h3>Como está o seu conteúdo hoje?</h3>
+        <div class="lf-options lf-col" data-name="situacao">
+          <button type="button" data-v="Ainda não posto">Ainda não posto</button>
+          <button type="button" data-v="Posto sem constância">Posto, mas sem constância</button>
+          <button type="button" data-v="Posto com frequência, sem resultado">Posto com frequência, mas sem resultado</button>
+          <button type="button" data-v="Já tenho equipe ou agência">Já tenho equipe ou agência</button>
+        </div>
+        <p class="lf-err" role="alert"></p>
+      </section>
+
+      <section class="lf-step" data-step="5" hidden>
+        <h3>Quando você quer começar?</h3>
+        <div class="lf-options lf-col" data-name="prazo">
+          <button type="button" data-v="O quanto antes">O quanto antes</button>
+          <button type="button" data-v="Neste mês">Neste mês</button>
+          <button type="button" data-v="Nos próximos 3 meses">Nos próximos 3 meses</button>
+          <button type="button" data-v="Só estou pesquisando">Só estou pesquisando</button>
+        </div>
+        <p class="lf-err" role="alert"></p>
+      </section>
+
+      <section class="lf-step" data-step="6" hidden>
+        <h3>Para alinharmos expectativas</h3>
+        <p class="lf-sub">O plano da Ávrio é de <strong>R$&nbsp;1.500/mês</strong>, com seu avatar digital e 15 reels por mês. Esse investimento cabe no seu momento?</p>
+        <div class="lf-options lf-col" data-name="investimento">
+          <button type="button" data-v="Sim, cabe">Sim, cabe no meu momento</button>
+          <button type="button" data-v="Quero entender melhor">Quero entender melhor antes</button>
+          <button type="button" data-v="Acima do orçamento">Está acima do meu orçamento</button>
+        </div>
+        <p class="lf-err" role="alert"></p>
+      </section>
+
+      <section class="lf-step lf-done" data-step="done" hidden>
+        <div class="lf-check" aria-hidden="true">
+          <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="none" stroke="url(#lfg)" stroke-width="3"/><path d="M15 27l8 8 14-16" fill="none" stroke="url(#lfg)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="lfg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8f3cfc"/><stop offset="1" stop-color="#fb3bc9"/></linearGradient></defs></svg>
+        </div>
+        <h3 id="lfDoneTitle">Tudo certo!</h3>
+        <p class="lf-sub" id="lfDoneText">Recebemos as suas respostas.</p>
+        <a class="btn btn-primary" id="lfWa" href="#" target="_blank" rel="noopener" data-wa="form">Continuar no WhatsApp <span class="arrow">→</span></a>
+      </section>
+
+      <div class="lf-nav" id="lfNav">
+        <button type="button" class="lf-back" id="lfBack">← Voltar</button>
+        <button type="button" class="btn btn-primary lf-next" id="lfNext">Continuar <span class="arrow">→</span></button>
+      </div>
+    </form>
+  </div>
+</div>
+
 <script src="site.js"></script>
+<script src="lead.js"></script>
 </body>
 </html>
