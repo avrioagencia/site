@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Martins &amp; Associados — Advocacia</title>
+<meta name="description" content="Demonstração de site para advocacia, criada pela Agência Ávrio.">
+<meta name="theme-color" content="#C2A36B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../base.css?v=202610211043">
+<link rel="stylesheet" href="../advogado.css?v=202610211043">
+<style>:root{--bg:#0F1626;--surface:#172036;--surface-2:#121B2D;--ink:#F2EDE2;--muted:#A7AEBE;--primary:#C2A36B;--primary-2:#8F7440;--on-primary:#121826;--glow:rgba(194,163,107,.20);--line:rgba(242,237,226,.10);--line-2:rgba(242,237,226,.22);--font-h:'Playfair Display',Georgia,serif;--font-b:'Inter',system-ui,sans-serif;--hw:600;--btn-r:12px;--radius:16px;}</style>
+</head>
+<body class="lay-advogado">
+<div class="ribbon" id="ribbon">
+  <span>Demonstração criada pela <b>Ávrio</b> para <b data-bind="biz">Martins &amp; Associados</b> · textos e imagens de exemplo</span>
+  <a class="ribbon-btn" id="ribbonCta" href="#" target="_blank" rel="noopener">Quero este site</a>
+  <button type="button" id="ribbonX" aria-label="Fechar aviso">×</button>
+</div>
+
+<div class="ad-strip"><div class="wrap"><span><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg> OAB/XX 00000</span><span><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg> Atendimento sigiloso</span><span><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Seg a Sex · 9h às 18h</span></div></div>
+<header class="ad-head"><div class="wrap">
+  <a class="logo" href="#topo"><span class="mk"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v16M7 20h10M5 7.5h14"/><path d="M5 7.5L2.5 13a2.5 2.5 0 005 0L5 7.5zM19 7.5L16.5 13a2.5 2.5 0 005 0L19 7.5z"/></svg></span><span data-bind="biz">Martins &amp; Associados</span></a>
+  <nav class="nav" id="nav"><a href="#areas">Áreas de atuação</a><a href="#como">Como funciona</a><a href="#sobre">Sobre</a><a href="#duvidas">Dúvidas</a></nav>
+  <button type="button" class="btn btn-p btn-sm" data-book="">Falar com um advogado</button><button type="button" class="burger" id="burger" aria-label="Abrir menu"><svg class="ico" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+<main id="topo">
+<section class="ad-hero"><div class="wrap">
+  <div class="ad-copy rv">
+    <span class="eyebrow">Advocacia · <span data-bind="city">sua cidade</span></span>
+    <h1>Orientação jurídica clara para <em>decisões importantes.</em></h1>
+    <p class="lead">Atendimento direto e transparente: entendemos o seu caso, explicamos as opções e conduzimos com ética e sigilo.</p>
+    <div class="ad-chips"><span class="chip"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg>OAB/XX 00000</span><span class="chip"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg>Sigilo profissional</span><span class="chip"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="5" width="16" height="11" rx="1.8"/><path d="M2 19.5h20"/></svg>Presencial e online</span></div>
+  </div>
+  <aside class="ad-triage rv" data-triage aria-label="Triagem do caso">
+    <h2>Triagem do seu caso</h2>
+    <p>Dois cliques para o advogado entender a sua situação.</p>
+    <label><span>Área do direito</span><select id="adArea"><option>Direito de Família e Sucessões</option><option>Direito Civil</option><option>Direito do Trabalho</option><option>Direito Previdenciário</option><option>Direito do Consumidor</option><option>Direito Empresarial</option></select></label>
+    <label><span>Urgência</span><select id="adUrg"><option>Hoje</option><option>Esta semana</option><option>Sem pressa</option></select></label>
+    <button type="button" class="btn btn-p" data-triage-go>Falar com um advogado <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    <small><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg> Informações protegidas pelo sigilo profissional.</small>
+  </aside>
+</div></section>
+<section class="ad-princ"><div class="wrap"><div><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg><b>Ética e sigilo</b><span>Compromisso profissional</span></div><div><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><b>Clareza</b><span>Linguagem simples</span></div><div><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3"/><path d="M3.5 20c0-3.2 2.5-5.2 5.5-5.2s5.5 2 5.5 5.2"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.8c2.9 0 4.8 1.7 4.8 4.4"/></svg><b>Atendimento direto</b><span>Você fala com o advogado</span></div><div><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>Retorno ágil</b><span>Respostas no prazo combinado</span></div></div></section>
+<section class="sec" id="areas"><div class="wrap">
+  <div class="ad-sh rv"><span class="eyebrow">Áreas de atuação</span><h2>Atuação com foco e responsabilidade</h2><p>Conteúdo informativo. Cada caso é analisado individualmente.</p></div>
+  <div class="ad-acc"><details class="rv"><summary><span class="ai"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-6h4v6"/></svg></span><span>Direito de Família e Sucessões</span></summary>
+        <div class="ad-body"><p>Divórcio, guarda, pensão, inventário e planejamento sucessório.</p><p class="ad-aviso">Conteúdo informativo. Cada caso exige análise individual.</p>
+        <button type="button" class="ad-link" data-book="Direito de Família e Sucessões">Falar sobre este tema <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></details><details class="rv"><summary><span class="ai"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg></span><span>Direito Civil</span></summary>
+        <div class="ad-body"><p>Contratos, responsabilidade civil e questões patrimoniais.</p><p class="ad-aviso">Conteúdo informativo. Cada caso exige análise individual.</p>
+        <button type="button" class="ad-link" data-book="Direito Civil">Falar sobre este tema <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></details><details class="rv"><summary><span class="ai"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5h6v2M3 13h18"/></svg></span><span>Direito do Trabalho</span></summary>
+        <div class="ad-body"><p>Orientação para trabalhadores e empresas em questões trabalhistas.</p><p class="ad-aviso">Conteúdo informativo. Cada caso exige análise individual.</p>
+        <button type="button" class="ad-link" data-book="Direito do Trabalho">Falar sobre este tema <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></details><details class="rv"><summary><span class="ai"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg></span><span>Direito Previdenciário</span></summary>
+        <div class="ad-body"><p>Aposentadorias, benefícios e revisões junto ao INSS.</p><p class="ad-aviso">Conteúdo informativo. Cada caso exige análise individual.</p>
+        <button type="button" class="ad-link" data-book="Direito Previdenciário">Falar sobre este tema <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></details><details class="rv"><summary><span class="ai"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3"/><path d="M3.5 20c0-3.2 2.5-5.2 5.5-5.2s5.5 2 5.5 5.2"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.8c2.9 0 4.8 1.7 4.8 4.4"/></svg></span><span>Direito do Consumidor</span></summary>
+        <div class="ad-body"><p>Defesa dos direitos nas relações de consumo.</p><p class="ad-aviso">Conteúdo informativo. Cada caso exige análise individual.</p>
+        <button type="button" class="ad-link" data-book="Direito do Consumidor">Falar sobre este tema <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></details><details class="rv"><summary><span class="ai"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v16M7 20h10M5 7.5h14"/><path d="M5 7.5L2.5 13a2.5 2.5 0 005 0L5 7.5zM19 7.5L16.5 13a2.5 2.5 0 005 0L19 7.5z"/></svg></span><span>Direito Empresarial</span></summary>
+        <div class="ad-body"><p>Assessoria jurídica para empresas e negócios.</p><p class="ad-aviso">Conteúdo informativo. Cada caso exige análise individual.</p>
+        <button type="button" class="ad-link" data-book="Direito Empresarial">Falar sobre este tema <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></details></div>
+</div></section>
+<section class="sec ad-alt" id="como"><div class="wrap">
+  <div class="ad-sh rv"><span class="eyebrow">Como funciona</span><h2>Da primeira conversa à estratégia</h2></div>
+  <div class="ad-steps"><div class="rv"><i>I</i><h3>Primeiro contato</h3><p>Conte o seu caso pelo WhatsApp e escolha o melhor horário.</p></div><div class="rv"><i>II</i><h3>Análise do caso</h3><p>Avaliamos documentos e fatos e explicamos as opções possíveis.</p></div><div class="rv"><i>III</i><h3>Estratégia e acompanhamento</h3><p>Você decide com clareza e acompanha cada etapa do processo.</p></div></div>
+</div></section>
+<section class="sec" id="sobre"><div class="wrap ad-about rv">
+  <div class="ad-mono"><b data-bind="initial">A</b><span data-bind="pro">Dr. Rafael Martins</span><small>OAB/XX 00000</small></div>
+  <div><span class="eyebrow">Sobre</span><h2>Quem conduz o seu caso</h2><p><span data-bind="pro">Dr. Rafael Martins</span> atua com atendimento direto, linguagem acessível e respeito às normas éticas da advocacia.</p><p>A advocacia é atividade de meio: a atuação é estratégica e transparente, sem garantia de resultado.</p>
+  <dl class="ad-dl"><div><dt><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg></dt><dd>OAB/XX 00000</dd></div><div><dt><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg></dt><dd>Pós-graduação</dd></div><div><dt><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v16M7 20h10M5 7.5h14"/><path d="M5 7.5L2.5 13a2.5 2.5 0 005 0L5 7.5zM19 7.5L16.5 13a2.5 2.5 0 005 0L19 7.5z"/></svg></dt><dd>Atuação ética</dd></div></dl><button type="button" class="btn btn-p" data-book="">Falar com um advogado <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+</div></section>
+<section class="sec g-sec" id="gSec" hidden>
+  <div class="wrap"><div class="g-card rv">
+    <div><div class="g-num" id="gNum">5,0</div><div class="g-stars" aria-label="Nota no Google"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div></div>
+    <div class="g-txt"><h3 style="font-size:24px">Avaliado no Google</h3><p id="gTxt">Avaliações reais de quem já foi atendido.</p>
+    <a class="btn btn-g btn-sm" href="#" target="_blank" rel="noopener">Ver avaliações no Google</a></div>
+  </div></div>
+</section>
+<section class="sec ad-alt" id="duvidas"><div class="wrap">
+  <div class="ad-sh rv"><span class="eyebrow">Dúvidas</span><h2>Perguntas frequentes</h2></div>
+  <div class="ad-faq rv"><details><summary>A primeira conversa tem custo?</summary><p>As condições de atendimento são informadas antes de agendar, com transparência.</p></details><details><summary>Como funciona o sigilo?</summary><p>Todas as informações compartilhadas são protegidas pelo sigilo profissional.</p></details><details><summary>Vocês garantem resultado?</summary><p>Não. A advocacia é atividade de meio. Atuamos com estratégia e transparência, sem prometer resultados.</p></details><details><summary>Atendem online?</summary><p>Sim. Atendemos presencialmente e por videochamada, conforme a sua preferência.</p></details><details><summary>Quais documentos devo reunir?</summary><p>Depende do caso. No primeiro contato listamos o que é necessário.</p></details></div>
+</div></section>
+<section class="ad-cta" id="contato"><div class="wrap">
+  <div><h2>Precisa de orientação jurídica?</h2><p>Conte o seu caso pelo WhatsApp. O atendimento é sigiloso.</p></div><button type="button" class="btn btn-p" data-book="">Falar com um advogado <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  <div class="ad-info"><div><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.8 7-11a7 7 0 10-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span><b>Endereço</b><span data-bind="city">sua cidade</span> · endereço completo aqui</span></div><div><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Horário</b>Seg a Sex · 9h às 18h</span></div><div><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg><span><b>WhatsApp</b>Resposta rápida</span></div></div>
+</div></section>
+</main>
+
+<footer class="ftr"><div class="wrap">
+  <div class="row"><span><b data-bind="biz">Martins &amp; Associados</b> · Conteúdo meramente informativo, em conformidade com as normas de publicidade da OAB. Não constitui oferta de serviços nem promessa de resultado. Responsável: <span data-bind="pro">Dr. Rafael Martins</span> · OAB/XX 00000.</span></div>
+  <div class="row"><span class="credit">Site com agente de atendimento por <a href="https://wa.me/5563984600461" target="_blank" rel="noopener">Agência Ávrio</a></span><span>Política de privacidade</span></div>
+</div></footer>
+
+<button type="button" class="fab" id="fab" aria-label="Abrir assistente de atendimento" aria-expanded="false"><span class="tip">Fale com a gente</span>
+  <svg class="ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.11.56 4.17 1.62 5.98L4 28l7.25-1.9a12.1 12.1 0 0 0 4.79 1c6.64 0 12.04-5.37 12.04-11.97C28.08 8.36 22.68 3 16.04 3Zm0 21.9a10 10 0 0 1-5.1-1.4l-.37-.22-4.3 1.13 1.15-4.17-.24-.38a9.8 9.8 0 0 1-1.5-5.2c0-5.44 4.46-9.87 9.96-9.87 5.5 0 9.96 4.43 9.96 9.87 0 5.44-4.46 9.88-9.96 9.88Zm5.46-7.4c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.63-.93-2.24-.24-.58-.5-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1-1.04 2.46 0 1.45 1.07 2.86 1.22 3.06.15.2 2.1 3.2 5.08 4.48.71.3 1.27.49 1.7.62.72.23 1.37.2 1.88.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg></button>
+<div class="sticky" id="sticky"><button type="button" class="btn btn-p" data-book="">Falar com um advogado <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+
+<section class="chat" id="chat" role="dialog" aria-label="Assistente virtual">
+  <div class="ch-h"><span class="av"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span><div><b>Assistente <span data-bind="biz">Martins &amp; Associados</span></b><span>Assistente virtual · responde na hora</span></div><button type="button" id="chX" aria-label="Fechar">×</button></div>
+  <div class="ch-b" id="chBody"></div>
+  <div class="qr" id="chQr"></div>
+  <div class="ch-f">Demonstração do assistente com IA da Ávrio</div>
+</section>
+
+<div class="ov" id="ov" hidden>
+  <div class="mdl" role="dialog" aria-modal="true" aria-label="Agendamento">
+    <button type="button" class="x" id="mx" aria-label="Fechar">×</button>
+    <div class="bar"><i id="mbar"></i></div>
+    <div class="stp" id="mstp">Passo 1 de 3</div>
+    <div class="pane">
+      <h3>O que você gostaria de agendar?</h3>
+      <p class="sub">Escolha uma opção. Você confirma os detalhes no atendimento.</p>
+      <div class="opts" id="svcOpts"><button type="button" data-v="Direito de Família e Sucessões">Direito de Família e Sucessões</button><button type="button" data-v="Direito Civil">Direito Civil</button><button type="button" data-v="Direito do Trabalho">Direito do Trabalho</button><button type="button" data-v="Direito Previdenciário">Direito Previdenciário</button><button type="button" data-v="Direito do Consumidor">Direito do Consumidor</button><button type="button" data-v="Direito Empresarial">Direito Empresarial</button></div>
+    </div>
+    <div class="pane" hidden>
+      <h3>Como podemos te chamar?</h3>
+      <p class="sub">Usamos apenas para entrar em contato sobre o seu agendamento.</p>
+      <label class="fld"><span>Seu nome</span><input id="fName" type="text" placeholder="Nome e sobrenome" autocomplete="name"></label>
+      <label class="fld"><span>WhatsApp (com DDD)</span><input id="fPhone" type="tel" inputmode="tel" placeholder="(00) 00000-0000" autocomplete="tel"></label>
+      <p class="err" role="alert"></p>
+    </div>
+    <div class="pane" hidden>
+      <h3>Qual período é melhor para você?</h3>
+      <p class="sub">Confirmamos o horário exato pelo WhatsApp.</p>
+      <div class="opts one" id="turnOpts"><button type="button" data-v="Manhã">Manhã</button><button type="button" data-v="Tarde">Tarde</button><button type="button" data-v="Noite">Noite</button></div>
+    </div>
+    <div class="pane" hidden>
+      <div class="okc"><svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="26" cy="26" r="24"/><path d="M15 27l8 8 14-16"/></svg></div>
+      <h3 style="text-align:center">Pedido pronto!</h3>
+      <p class="sub" style="text-align:center">Assim a mensagem chegaria no WhatsApp de <b id="doneBiz"></b>:</p>
+      <div class="wa-prev" id="prev">x<small>agora · mensagem automática</small></div>
+      <a class="btn btn-p" id="doneGo" href="#" target="_blank" rel="noopener" style="width:100%">Continuar</a>
+      <p class="note" id="doneNote"></p>
+    </div>
+    <div class="mnav" id="mnav" hidden>
+      <button type="button" class="back" id="mback">← Voltar</button>
+      <button type="button" class="btn btn-p btn-sm" id="mnext">Continuar</button>
+    </div>
+  </div>
+</div>
+
+<script>window.NICHE={"biz": "Martins & Associados", "pro": "Dr. Rafael Martins", "city": "sua cidade", "label": "advocacia", "titleTail": "Advocacia", "chat": {"hello": "Olá! Sou o assistente virtual do escritório {biz}. Posso ajudar com horários, áreas de atuação e agendamento.", "disclaimer": "Sou uma IA e não presto orientação jurídica. Quem analisa o seu caso é o advogado.", "menu": [{"label": "Horários", "answer": "Atendemos de segunda a sexta, das 9h às 18h, presencialmente e online. Quer agendar?"}, {"label": "Serviços", "answer": "Atuamos em Família e Sucessões, Civil, Trabalhista, Previdenciário, Consumidor e Empresarial."}, {"label": "Valores", "answer": "As condições de atendimento são informadas antes de agendar. Posso marcar uma conversa para você?"}, {"label": "Agendar", "action": "book"}, {"label": "Falar com atendente", "action": "human"}]}};</script>
+<script src="../demo.js?v=202610211043"></script>
+<script src="../layouts.js?v=202610211043"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+/* Layout DENTISTA — clínico, claro, "bento" + abas de tratamentos + passos em linha */
+.logo{display:flex;align-items:center;gap:11px;font-family:var(--font-h);font-weight:700;font-size:19px}
+.logo .mk{width:38px;height:38px;border-radius:12px;background:var(--primary);color:var(--on-primary);display:grid;place-items:center;font-size:20px}
+.nav{display:flex;align-items:center;gap:26px;font-size:15px;font-weight:600;color:var(--muted)}
+.nav a:hover{color:var(--ink)}
+
+.dn-top{background:var(--primary-2);color:#fff;font-size:13px}
+.dn-top .wrap{display:flex;gap:26px;justify-content:flex-end;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.dn-top span{display:inline-flex;align-items:center;gap:7px;opacity:.92}
+.dn-head{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.dn-head .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;height:70px;gap:18px}
+
+.dn-hero{position:relative;padding:clamp(40px,6vw,84px) 0 clamp(50px,6vw,84px);background:linear-gradient(180deg,var(--surface-2),var(--bg))}
+.dn-hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+.dn-copy h1{font-size:clamp(36px,5.2vw,60px);margin:18px 0 18px}
+.dn-copy h1 em{font-style:normal;color:var(--primary)}
+.dn-copy .lead{color:var(--muted);font-size:clamp(17px,1.8vw,19.5px);max-width:520px}
+.dn-quick{display:flex;align-items:flex-end;gap:12px;margin-top:28px;padding:14px;background:var(--surface);border:1px solid var(--line-2);border-radius:22px;box-shadow:0 24px 50px -34px var(--primary)}
+.dn-quick label{flex:1;min-width:0}
+.dn-quick label span{display:block;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 6px 6px}
+.dn-quick select{width:100%;padding:13px 14px;border-radius:14px;border:1.5px solid var(--line-2);background:var(--bg);color:var(--ink);font:inherit;font-weight:600;font-size:16px}
+.dn-quick .btn{padding:14px 22px}
+.dn-chips{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:22px}
+.dn-bento{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:minmax(150px,auto);gap:14px}
+.dn-bento .b{display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:22px;border-radius:26px;background:var(--surface);border:1px solid var(--line);box-shadow:0 22px 44px -34px var(--primary);position:relative;overflow:hidden}
+.dn-bento .b .ico{font-size:34px;color:var(--primary);margin-bottom:auto}
+.dn-bento .b b{font-size:17px;line-height:1.2}
+.dn-bento .b small{color:var(--muted);font-size:13.5px}
+.dn-bento .b1{grid-row:span 2;background:linear-gradient(160deg,var(--primary),var(--primary-2));color:var(--on-primary);border:none}
+.dn-bento .b1 .ico{font-size:72px;color:var(--on-primary);opacity:.95}
+.dn-bento .b1 small{color:var(--on-primary);opacity:.85}
+.dn-bento .b4{background:var(--surface-2)}
+
+.dn-trust{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.dn-trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding-top:26px;padding-bottom:26px}
+.dn-trust div{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center}
+.dn-trust .ico{grid-row:span 2;font-size:30px;color:var(--primary)}
+.dn-trust b{font-size:15.5px;line-height:1.2}
+.dn-trust span{font-size:13px;color:var(--muted)}
+
+.dn-sh{max-width:640px;margin-bottom:clamp(30px,4vw,48px)}
+.dn-sh h2{font-size:clamp(30px,4vw,44px);margin:12px 0 12px}
+.dn-sh p{color:var(--muted);font-size:18px}
+.dn-tabs{display:grid;grid-template-columns:300px 1fr;gap:24px}
+.dn-tablist{display:flex;flex-direction:column;gap:8px}
+.dn-tab{display:flex;align-items:center;gap:14px;text-align:left;padding:16px 18px;border-radius:18px;border:1.5px solid var(--line);background:var(--surface);font-weight:700;font-size:16px;transition:.2s}
+.dn-tab .ico{font-size:24px;color:var(--primary)}
+.dn-tab:hover{border-color:var(--primary)}
+.dn-tab.on{background:var(--primary);border-color:var(--primary);color:var(--on-primary);box-shadow:0 18px 34px -20px var(--primary)}
+.dn-tab.on .ico{color:var(--on-primary)}
+.dn-panel{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:30px;padding:clamp(22px,3.4vw,40px);min-height:100%;animation:dnIn .4s both}
+@keyframes dnIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.dn-art{aspect-ratio:1;border-radius:26px;background:linear-gradient(160deg,var(--primary),var(--primary-2));display:grid;place-items:center;color:var(--on-primary)}
+.dn-art .ico{width:46%;height:46%;stroke-width:1.2}
+.dn-panel h3{font-size:clamp(24px,3vw,32px);margin-bottom:10px}
+.dn-panel p{color:var(--muted);margin-bottom:14px}
+.dn-panel ul{list-style:none;display:grid;gap:8px;margin:0 0 22px}
+.dn-panel li{position:relative;padding-left:26px;font-size:15.5px;font-weight:600}
+.dn-panel li::before{content:"";position:absolute;left:0;top:7px;width:14px;height:14px;border-radius:50%;background:var(--primary)}
+.dn-alt{background:var(--surface-2)}
+.dn-stepper{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:30px;position:relative;counter-reset:s}
+.dn-stepper::before{content:"";position:absolute;left:8%;right:8%;top:27px;height:2px;background:repeating-linear-gradient(90deg,var(--primary) 0 10px,transparent 10px 18px);opacity:.45}
+.dn-stepper li{position:relative;text-align:center;padding:0 10px}
+.dn-stepper i{display:grid;place-items:center;width:56px;height:56px;margin:0 auto 18px;border-radius:50%;background:var(--primary);color:var(--on-primary);font:700 22px var(--font-h);font-style:normal;box-shadow:0 0 0 8px var(--surface-2)}
+.dn-stepper h3{font-size:21px;margin-bottom:8px}
+.dn-stepper p{color:var(--muted);font-size:15.5px}
+.dn-about{display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(28px,5vw,64px);align-items:center}
+.dn-portrait{position:relative;aspect-ratio:1/1.05;max-width:400px;border-radius:36px 36px 120px 36px;background:linear-gradient(160deg,var(--primary-2),var(--primary));display:grid;place-items:center;color:var(--on-primary);overflow:hidden}
+.dn-portrait span{font:700 clamp(80px,12vw,130px) var(--font-h);opacity:.9}
+.dn-portrait small{position:absolute;bottom:14px;left:0;right:0;text-align:center;font:600 11.5px var(--font-b);letter-spacing:.12em;text-transform:uppercase;opacity:.6}
+.dn-about h2{font-size:clamp(30px,4vw,42px);margin:12px 0 16px}
+.dn-about p{color:var(--muted);margin-bottom:12px;font-size:17.5px}
+.dn-creds{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 26px}
+.dn-faq{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}
+.dn-cta{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:var(--on-primary);padding:clamp(48px,6vw,80px) 0}
+.dn-cta .wrap{display:grid;grid-template-columns:1fr auto;gap:24px 40px;align-items:center}
+.dn-cta h2{font-size:clamp(28px,4vw,46px);margin-bottom:8px}
+.dn-cta p{opacity:.9;font-size:18px}
+.dn-cta .btn-p{background:var(--on-primary);color:var(--primary)}
+.dn-info{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:10px}
+.dn-info>div{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:18px;padding:16px 18px;font-size:15px}
+.dn-info .ico{font-size:24px;margin-top:2px}
+.dn-info b{display:block}
+
+@media (max-width:980px){
+  .dn-hero .wrap,.dn-about,.dn-cta .wrap{grid-template-columns:1fr}
+  .dn-bento{grid-auto-rows:minmax(130px,auto)}
+  .dn-trust .wrap{grid-template-columns:repeat(2,1fr)}
+  .dn-tabs{grid-template-columns:1fr}
+  .dn-tablist{flex-direction:row;overflow-x:auto;padding-bottom:6px}
+  .dn-tab{flex-shrink:0;padding:12px 16px}
+  .dn-panel{grid-template-columns:1fr}
+  .dn-art{max-width:200px}
+  .dn-faq{grid-template-columns:1fr}
+  .dn-info{grid-template-columns:1fr}
+}
+@media (max-width:760px){
+  .dn-top .wrap{justify-content:center;gap:14px;font-size:12px}
+  .dn-head .btn-sm{display:none}
+  .dn-quick{flex-direction:column;align-items:stretch}
+  .dn-stepper{grid-template-columns:1fr;gap:26px}
+  .dn-stepper::before{display:none}
+  .dn-bento .b1{grid-row:auto;grid-column:span 2}
+}
