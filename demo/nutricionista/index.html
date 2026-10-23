@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../base.css?v=202610211059">
-<link rel="stylesheet" href="../nutricionista.css?v=202610211059">
+<link rel="stylesheet" href="../base.css?v=202610230932">
+<link rel="stylesheet" href="../nutricionista.css?v=202610230932">
 <style>:root{--bg:#F7F5EE;--surface:#FFFFFF;--surface-2:#EDEBDD;--ink:#1F3326;--muted:#5B6B5F;--primary:#3B6B4B;--primary-2:#274A33;--on-primary:#FFFFFF;--glow:rgba(233,162,59,.28);--line:rgba(31,51,38,.10);--line-2:rgba(31,51,38,.20);--font-h:'DM Serif Display',Georgia,serif;--font-b:'DM Sans',system-ui,sans-serif;--hw:400;--btn-r:999px;--radius:22px;}</style>
 </head>
 <body class="lay-nutricionista">
@@ -94,6 +94,7 @@
   <div class="ch-h"><span class="av"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span><div><b>Assistente <span data-bind="biz">Nutri Equilíbrio</span></b><span>Assistente virtual · responde na hora</span></div><button type="button" id="chX" aria-label="Fechar">×</button></div>
   <div class="ch-b" id="chBody"></div>
   <div class="qr" id="chQr"></div>
+  <form class="ch-in" id="chForm" hidden><input id="chInput" type="text" maxlength="300" placeholder="Digite sua dúvida..." autocomplete="off" aria-label="Digite sua dúvida"><button type="submit" aria-label="Enviar">&#10148;</button></form>
   <div class="ch-f">Demonstração do assistente com IA da Ávrio</div>
 </section>
 
@@ -134,8 +135,8 @@
   </div>
 </div>
 
-<script>window.NICHE={"biz": "Nutri Equilíbrio", "pro": "Dra. Marina Lopes", "city": "sua cidade", "label": "nutrição", "titleTail": "Nutrição", "chat": {"hello": "Olá! Sou o assistente virtual da {biz}. Posso ajudar com horários, atendimentos e agendamento.", "disclaimer": "Sou uma IA e não faço orientação nutricional. Isso é feito na consulta com a nutricionista.", "menu": [{"label": "Horários", "answer": "Atendemos de segunda a sexta, das 8h às 18h, presencial e online. Quer agendar?"}, {"label": "Serviços", "answer": "Fazemos emagrecimento saudável, reeducação alimentar, nutrição esportiva, saúde da mulher e nutrição comportamental."}, {"label": "Valores", "answer": "Os valores e as formas de pagamento são informados no agendamento. Posso marcar uma consulta para você?"}, {"label": "Agendar", "action": "book"}, {"label": "Falar com atendente", "action": "human"}]}};</script>
-<script src="../demo.js?v=202610211059"></script>
-<script src="../layouts.js?v=202610211059"></script>
+<script>window.NICHE={"slug": "nutricionista", "biz": "Nutri Equilíbrio", "pro": "Dra. Marina Lopes", "city": "sua cidade", "label": "nutrição", "titleTail": "Nutrição", "chat": {"hello": "Olá! Sou o assistente virtual da {biz}. Posso ajudar com horários, atendimentos e agendamento.", "disclaimer": "Sou uma IA e não faço orientação nutricional. Isso é feito na consulta com a nutricionista.", "menu": [{"label": "Horários", "answer": "Atendemos de segunda a sexta, das 8h às 18h, presencial e online. Quer agendar?"}, {"label": "Serviços", "answer": "Fazemos emagrecimento saudável, reeducação alimentar, nutrição esportiva, saúde da mulher e nutrição comportamental."}, {"label": "Valores", "answer": "Os valores e as formas de pagamento são informados no agendamento. Posso marcar uma consulta para você?"}, {"label": "Agendar", "action": "book"}, {"label": "Falar com atendente", "action": "human"}]}};window.AVRIO_CHAT_URL="https://avrio-chat.avrio-chat.workers.dev";</script>
+<script src="../demo.js?v=202610230932"></script>
+<script src="../layouts.js?v=202610230932"></script>
 </body>
 </html>

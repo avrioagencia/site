@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../base.css?v=202610211059">
-<link rel="stylesheet" href="../dentista.css?v=202610211059">
+<link rel="stylesheet" href="../base.css?v=202610230932">
+<link rel="stylesheet" href="../dentista.css?v=202610230932">
 <style>:root{--bg:#F6FAFB;--surface:#FFFFFF;--surface-2:#EAF3F5;--ink:#0B2A36;--muted:#4C6672;--primary:#0B7285;--primary-2:#0A4F5E;--on-primary:#FFFFFF;--glow:rgba(11,114,133,.22);--line:rgba(11,42,54,.10);--line-2:rgba(11,42,54,.20);--font-h:'Fraunces',Georgia,serif;--font-b:'Manrope',system-ui,sans-serif;--hw:600;--btn-r:999px;--radius:22px;}</style>
 </head>
 <body class="lay-dentista">
@@ -106,6 +106,7 @@
   <div class="ch-h"><span class="av"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span><div><b>Assistente <span data-bind="biz">Clínica Sorriso</span></b><span>Assistente virtual · responde na hora</span></div><button type="button" id="chX" aria-label="Fechar">×</button></div>
   <div class="ch-b" id="chBody"></div>
   <div class="qr" id="chQr"></div>
+  <form class="ch-in" id="chForm" hidden><input id="chInput" type="text" maxlength="300" placeholder="Digite sua dúvida..." autocomplete="off" aria-label="Digite sua dúvida"><button type="submit" aria-label="Enviar">&#10148;</button></form>
   <div class="ch-f">Demonstração do assistente com IA da Ávrio</div>
 </section>
 
@@ -146,8 +147,8 @@
   </div>
 </div>
 
-<script>window.NICHE={"biz": "Clínica Sorriso", "pro": "Dra. Ana Souza", "city": "sua cidade", "label": "odontologia", "titleTail": "Odontologia", "chat": {"hello": "Olá! Sou o assistente virtual da {biz}. Posso ajudar com horários, serviços e agendamento.", "disclaimer": "Sou uma IA e não dou orientação clínica. Dúvidas sobre o seu caso são respondidas por um profissional.", "menu": [{"label": "Horários", "answer": "Atendemos de segunda a sexta, das 8h às 18h. Quer que eu encaminhe o agendamento?"}, {"label": "Serviços", "answer": "Fazemos avaliação, clareamento, implantes, ortodontia, lentes e atendimento de urgência."}, {"label": "Valores", "answer": "Os valores dependem da avaliação do seu caso. Posso agendar uma avaliação para você?"}, {"label": "Agendar", "action": "book"}, {"label": "Falar com atendente", "action": "human"}]}};</script>
-<script src="../demo.js?v=202610211059"></script>
-<script src="../layouts.js?v=202610211059"></script>
+<script>window.NICHE={"slug": "dentista", "biz": "Clínica Sorriso", "pro": "Dra. Ana Souza", "city": "sua cidade", "label": "odontologia", "titleTail": "Odontologia", "chat": {"hello": "Olá! Sou o assistente virtual da {biz}. Posso ajudar com horários, serviços e agendamento.", "disclaimer": "Sou uma IA e não dou orientação clínica. Dúvidas sobre o seu caso são respondidas por um profissional.", "menu": [{"label": "Horários", "answer": "Atendemos de segunda a sexta, das 8h às 18h. Quer que eu encaminhe o agendamento?"}, {"label": "Serviços", "answer": "Fazemos avaliação, clareamento, implantes, ortodontia, lentes e atendimento de urgência."}, {"label": "Valores", "answer": "Os valores dependem da avaliação do seu caso. Posso agendar uma avaliação para você?"}, {"label": "Agendar", "action": "book"}, {"label": "Falar com atendente", "action": "human"}]}};window.AVRIO_CHAT_URL="https://avrio-chat.avrio-chat.workers.dev";</script>
+<script src="../demo.js?v=202610230932"></script>
+<script src="../layouts.js?v=202610230932"></script>
 </body>
 </html>

@@ -190,6 +190,31 @@
     }
   }
   function closeChat() { chat.classList.remove('open'); fab.setAttribute('aria-expanded', 'false'); }
+  // ---- agente de IA (Cloudflare Worker). Sem URL configurada, fica só o atendimento por botões.
+  const CHAT_URL = (q.get('chat') || window.AVRIO_CHAT_URL || '').trim().replace(/\/$/, '');
+  const chForm = $('#chForm'), chInput = $('#chInput'), hist = [];
+  if (CHAT_URL && chForm) chForm.hidden = false;
+  function typingEl() {
+    const t = document.createElement('div'); t.className = 'msg bot typing'; t.innerHTML = '<i></i><i></i><i></i>';
+    body.appendChild(t); body.scrollTop = body.scrollHeight; return t;
+  }
+  chForm && chForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const text = chInput.value.trim(); if (!text) return;
+    chInput.value = ''; qr.innerHTML = ''; say(text, 'me'); hist.push({ role: 'user', content: text });
+    const t = typingEl(); chInput.disabled = true;
+    try {
+      const r = await fetch(CHAT_URL + '/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ niche: N.slug, biz, pro, city, messages: hist.slice(-10) }) });
+      const j = await r.json();
+      if (!r.ok || j.error || !j.reply) throw new Error('ia');
+      t.remove(); say(j.reply); hist.push({ role: 'assistant', content: j.reply });
+      if (j.book) setTimeout(() => { closeChat(); openModal(''); }, 1100); else renderQr(N.chat.menu);
+    } catch (err) {
+      t.remove(); chForm.hidden = true;   // IA indisponível ou no limite: volta ao atendimento por botões
+      say('Estou com muita procura agora. Use as opções abaixo ou agende direto.'); renderQr(N.chat.menu);
+    } finally { chInput.disabled = false; chInput.focus(); }
+  });
   fab.addEventListener('click', () => (chat.classList.contains('open') ? closeChat() : openChat()));
   $('#chX').addEventListener('click', closeChat);
   // abre o assistente sozinho depois de um tempo, uma vez, só no desktop
