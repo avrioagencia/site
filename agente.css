@@ -43,5 +43,5 @@
 .ag-win.min .ag-av{width:34px;height:34px;border-radius:50%}
 .ag-win.min .ag-h small{display:none}
 .ag-win.min .ag-x{font-size:0;position:relative}
-.ag-win.min .ag-x::before{content:"91";font-size:17px}
+.ag-win.min .ag-x::before{content:"↑";font-size:17px}
 @media (max-width:640px){.ag-win{bottom:88px;height:min(560px,calc(100dvh - 112px))}}
