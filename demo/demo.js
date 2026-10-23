@@ -156,10 +156,17 @@
   // ---------- Chat assistente (demonstração, sem IA real) ----------
   const chat = $('#chat'), body = $('#chBody'), qr = $('#chQr'), fab = $('#fab');
   let chatStarted = false;
-  function say(text, who) {
+  // guarda a conversa e se o chat estava aberto, para não perder ao recarregar ou trocar de página
+  const SK = 'avrio-chat:' + location.pathname + ':' + biz;
+  let log = [], chatOpen = false;
+  const ss = { get() { try { return JSON.parse(sessionStorage.getItem(SK) || 'null'); } catch (e) { return null; } },
+               set() { try { sessionStorage.setItem(SK, JSON.stringify({ log: log.slice(-30), open: chatOpen })); } catch (e) {} } };
+  function say(text, who, noSave) {
     const m = document.createElement('div');
     m.className = 'msg ' + (who || 'bot'); m.textContent = text;
-    body.appendChild(m); body.scrollTop = body.scrollHeight; return m;
+    body.appendChild(m); body.scrollTop = body.scrollHeight;
+    if (!noSave) { log.push({ w: who || 'bot', t: text }); ss.set(); }
+    return m;
   }
   function botSay(text, then) {
     const t = document.createElement('div'); t.className = 'msg bot typing'; t.innerHTML = '<i></i><i></i><i></i>';
@@ -183,13 +190,13 @@
     });
   }
   function openChat() {
-    chat.classList.add('open'); fab.setAttribute('aria-expanded', 'true');
+    chat.classList.add('open'); fab.setAttribute('aria-expanded', 'true'); chatOpen = true; ss.set();
     if (!chatStarted) {
       chatStarted = true;
       botSay(N.chat.hello.replace('{biz}', biz), () => botSay(N.chat.disclaimer, () => renderQr(N.chat.menu)));
     }
   }
-  function closeChat() { chat.classList.remove('open'); fab.setAttribute('aria-expanded', 'false'); }
+  function closeChat() { chat.classList.remove('open'); fab.setAttribute('aria-expanded', 'false'); chatOpen = false; ss.set(); }
   // ---- agente de IA (Cloudflare Worker). Sem URL configurada, fica só o atendimento por botões.
   const CHAT_URL = (q.get('chat') || window.AVRIO_CHAT_URL || '').trim().replace(/\/$/, '');
   const chForm = $('#chForm'), chInput = $('#chInput'), hist = [];
@@ -217,6 +224,18 @@
   });
   fab.addEventListener('click', () => (chat.classList.contains('open') ? closeChat() : openChat()));
   $('#chX').addEventListener('click', closeChat);
+  // restaura a conversa guardada (recarregou a página ou voltou a ela)
+  const saved = ss.get();
+  if (saved && saved.log && saved.log.length) {
+    chatStarted = true; log = saved.log;
+    log.forEach((m) => {
+      say(m.t, m.w, true);
+      if (m.w === 'me') hist.push({ role: 'user', content: m.t });
+      else if (hist.length) hist.push({ role: 'assistant', content: m.t });
+    });
+    renderQr(N.chat.menu);
+    if (saved.open) { chat.classList.add('open'); fab.setAttribute('aria-expanded', 'true'); chatOpen = true; }
+  }
   // abre o assistente sozinho depois de um tempo, uma vez, só no desktop
   if (window.innerWidth > 980) setTimeout(() => { if (!chatStarted && ov.hidden) openChat(); }, 9000);
 
