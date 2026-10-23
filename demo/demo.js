@@ -158,9 +158,9 @@
   let chatStarted = false;
   // guarda a conversa e se o chat estava aberto, para não perder ao recarregar ou trocar de página
   const SK = 'avrio-chat:' + location.pathname + ':' + biz;
-  let log = [], chatOpen = false;
+  let log = [], chatOpen = false, chatMin = false;
   const ss = { get() { try { return JSON.parse(sessionStorage.getItem(SK) || 'null'); } catch (e) { return null; } },
-               set() { try { sessionStorage.setItem(SK, JSON.stringify({ log: log.slice(-30), open: chatOpen })); } catch (e) {} } };
+               set() { try { sessionStorage.setItem(SK, JSON.stringify({ log: log.slice(-30), open: chatOpen, min: chatMin })); } catch (e) {} } };
   function say(text, who, noSave) {
     const m = document.createElement('div');
     m.className = 'msg ' + (who || 'bot'); m.textContent = text;
@@ -190,13 +190,19 @@
     });
   }
   function openChat() {
-    chat.classList.add('open'); fab.setAttribute('aria-expanded', 'true'); chatOpen = true; ss.set();
+    chat.classList.add('open'); chat.classList.remove('min'); fab.setAttribute('aria-expanded', 'true'); chatOpen = true; chatMin = false; ss.set();
     if (!chatStarted) {
       chatStarted = true;
       botSay(N.chat.hello.replace('{biz}', biz), () => botSay(N.chat.disclaimer, () => renderQr(N.chat.menu)));
     }
+    body.scrollTop = body.scrollHeight;
   }
-  function closeChat() { chat.classList.remove('open'); fab.setAttribute('aria-expanded', 'false'); chatOpen = false; ss.set(); }
+  // sair da conversa = minimizar (fica só a barra do assistente; clicar nela reabre)
+  function minimizeChat() {
+    if (!chat.classList.contains('open')) return;
+    chat.classList.add('min'); fab.setAttribute('aria-expanded', 'false'); chatMin = true; ss.set();
+  }
+  function closeChat() { chatStarted ? minimizeChat() : (chat.classList.remove('open'), fab.setAttribute('aria-expanded', 'false'), chatOpen = false, ss.set()); }
   // ---- agente de IA (Cloudflare Worker). Sem URL configurada, fica só o atendimento por botões.
   const CHAT_URL = (q.get('chat') || window.AVRIO_CHAT_URL || '').trim().replace(/\/$/, '');
   const chForm = $('#chForm'), chInput = $('#chInput'), hist = [];
@@ -222,8 +228,15 @@
       say('Estou com muita procura agora. Use as opções abaixo ou agende direto.'); renderQr(N.chat.menu);
     } finally { chInput.disabled = false; chInput.focus(); }
   });
-  fab.addEventListener('click', () => (chat.classList.contains('open') ? closeChat() : openChat()));
-  $('#chX').addEventListener('click', closeChat);
+  fab.addEventListener('click', () => (chat.classList.contains('open') && !chat.classList.contains('min') ? minimizeChat() : openChat()));
+  $('#chX').addEventListener('click', (e) => { e.stopPropagation(); minimizeChat(); });
+  $('#chat .ch-h').addEventListener('click', () => { if (chat.classList.contains('min')) openChat(); });
+  // clicou fora do chat: minimiza
+  document.addEventListener('pointerdown', (e) => {
+    if (!chat.classList.contains('open') || chat.classList.contains('min')) return;
+    if (chat.contains(e.target) || fab.contains(e.target) || e.target.closest('#ov')) return;
+    minimizeChat();
+  });
   // restaura a conversa guardada (recarregou a página ou voltou a ela)
   const saved = ss.get();
   if (saved && saved.log && saved.log.length) {
@@ -234,7 +247,7 @@
       else if (hist.length) hist.push({ role: 'assistant', content: m.t });
     });
     renderQr(N.chat.menu);
-    if (saved.open) { chat.classList.add('open'); fab.setAttribute('aria-expanded', 'true'); chatOpen = true; }
+    if (saved.open) { chat.classList.add('open'); chatOpen = true; if (saved.min) { chat.classList.add('min'); chatMin = true; } else fab.setAttribute('aria-expanded', 'true'); }
   }
   // abre o assistente sozinho depois de um tempo, uma vez, só no desktop
   if (window.innerWidth > 980) setTimeout(() => { if (!chatStarted && ov.hidden) openChat(); }, 9000);

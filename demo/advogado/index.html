@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../base.css?v=202610230943">
-<link rel="stylesheet" href="../advogado.css?v=202610230943">
+<link rel="stylesheet" href="../base.css?v=202610231005">
+<link rel="stylesheet" href="../advogado.css?v=202610231005">
 <style>:root{--bg:#0F1626;--surface:#172036;--surface-2:#121B2D;--ink:#F2EDE2;--muted:#A7AEBE;--primary:#C2A36B;--primary-2:#8F7440;--on-primary:#121826;--glow:rgba(194,163,107,.20);--line:rgba(242,237,226,.10);--line-2:rgba(242,237,226,.22);--font-h:'Playfair Display',Georgia,serif;--font-b:'Inter',system-ui,sans-serif;--hw:600;--btn-r:12px;--radius:16px;}</style>
 </head>
 <body class="lay-advogado">
@@ -30,7 +30,7 @@
   <button type="button" class="btn btn-p btn-sm" data-book="">Falar com um advogado</button><button type="button" class="burger" id="burger" aria-label="Abrir menu"><svg class="ico" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 </div></header>
 <main id="topo">
-<section class="ad-hero"><div class="wrap">
+<section class="ad-hero"><img class="hero-bg" src="../img/ad-1.jpg" alt="" loading="lazy" decoding="async"><div class="wrap">
   <div class="ad-copy rv">
     <span class="eyebrow">Advocacia · <span data-bind="city">sua cidade</span></span>
     <h1>Orientação jurídica clara para <em>decisões importantes.</em></h1>
@@ -67,6 +67,7 @@
   <div class="ad-sh rv"><span class="eyebrow">Como funciona</span><h2>Da primeira conversa à estratégia</h2></div>
   <div class="ad-steps"><div class="rv"><i>I</i><h3>Primeiro contato</h3><p>Conte o seu caso pelo WhatsApp e escolha o melhor horário.</p></div><div class="rv"><i>II</i><h3>Análise do caso</h3><p>Avaliamos documentos e fatos e explicamos as opções possíveis.</p></div><div class="rv"><i>III</i><h3>Estratégia e acompanhamento</h3><p>Você decide com clareza e acompanha cada etapa do processo.</p></div></div>
 </div></section>
+<section class="ph-band"><div class="wrap"><figure class="rv"><img src="../img/ad-2.jpg" alt="Livros jurídicos sobre uma mesa de trabalho" loading="lazy" decoding="async"><figcaption>Imagem ilustrativa</figcaption></figure></div></section>
 <section class="sec" id="sobre"><div class="wrap ad-about rv">
   <div class="ad-mono"><b data-bind="initial">A</b><span data-bind="pro">Dr. Rafael Martins</span><small>OAB/XX 00000</small></div>
   <div><span class="eyebrow">Sobre</span><h2>Quem conduz o seu caso</h2><p><span data-bind="pro">Dr. Rafael Martins</span> atua com atendimento direto, linguagem acessível e respeito às normas éticas da advocacia.</p><p>A advocacia é atividade de meio: a atuação é estratégica e transparente, sem garantia de resultado.</p>
@@ -99,7 +100,7 @@
 <div class="sticky" id="sticky"><button type="button" class="btn btn-p" data-book="">Falar com um advogado <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
 
 <section class="chat" id="chat" role="dialog" aria-label="Assistente virtual">
-  <div class="ch-h"><span class="av"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span><div><b>Assistente <span data-bind="biz">Martins &amp; Associados</span></b><span>Assistente virtual · responde na hora</span></div><button type="button" id="chX" aria-label="Fechar">×</button></div>
+  <div class="ch-h"><span class="av"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span><div><b>Assistente <span data-bind="biz">Martins &amp; Associados</span></b><span>Assistente virtual · responde na hora</span></div><button type="button" id="chX" aria-label="Minimizar assistente">&#8211;</button></div>
   <div class="ch-b" id="chBody"></div>
   <div class="qr" id="chQr"></div>
   <form class="ch-in" id="chForm" hidden><input id="chInput" type="text" maxlength="300" placeholder="Digite sua dúvida..." autocomplete="off" aria-label="Digite sua dúvida"><button type="submit" aria-label="Enviar">&#10148;</button></form>
@@ -144,7 +145,7 @@
 </div>
 
 <script>window.NICHE={"slug": "advogado", "biz": "Martins & Associados", "pro": "Dr. Rafael Martins", "city": "sua cidade", "label": "advocacia", "titleTail": "Advocacia", "chat": {"hello": "Olá! Sou o assistente virtual do escritório {biz}. Posso ajudar com horários, áreas de atuação e agendamento.", "disclaimer": "Sou uma IA e não presto orientação jurídica. Quem analisa o seu caso é o advogado.", "menu": [{"label": "Horários", "answer": "Atendemos de segunda a sexta, das 9h às 18h, presencialmente e online. Quer agendar?"}, {"label": "Serviços", "answer": "Atuamos em Família e Sucessões, Civil, Trabalhista, Previdenciário, Consumidor e Empresarial."}, {"label": "Valores", "answer": "As condições de atendimento são informadas antes de agendar. Posso marcar uma conversa para você?"}, {"label": "Agendar", "action": "book"}, {"label": "Falar com atendente", "action": "human"}]}};window.AVRIO_CHAT_URL="https://avrio-chat.avrio-chat.workers.dev";</script>
-<script src="../demo.js?v=202610230943"></script>
-<script src="../layouts.js?v=202610230943"></script>
+<script src="../demo.js?v=202610231005"></script>
+<script src="../layouts.js?v=202610231005"></script>
 </body>
 </html>

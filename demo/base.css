@@ -103,6 +103,10 @@ details p{padding:0 24px 22px;color:var(--muted);font-size:16.5px}
 /* ---------- CHAT (assistente demonstrativo) ---------- */
 .chat{position:fixed;right:20px;bottom:96px;z-index:150;width:min(380px,calc(100vw - 28px));height:min(560px,calc(100dvh - 130px));background:var(--surface);color:var(--ink);border-radius:22px;border:1px solid var(--line-2);box-shadow:0 40px 90px -30px rgba(0,0,0,.5);display:flex;flex-direction:column;overflow:hidden;opacity:0;transform:translateY(16px) scale(.97);pointer-events:none;transition:.3s}
 .chat.open{opacity:1;transform:none;pointer-events:auto}
+.chat.min{height:64px;cursor:pointer}
+.chat.min .ch-b,.chat.min .qr,.chat.min .ch-in,.chat.min .ch-f{display:none}
+.chat.min .ch-h{border-bottom:0}
+.chat{transition:.3s,height .25s}
 .ch-h{display:flex;align-items:center;gap:12px;padding:15px 18px;background:var(--primary);color:var(--on-primary)}
 .ch-h .av{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center;font-size:21px}
 .ch-h b{display:block;font-size:15.5px;line-height:1.2}
@@ -147,3 +151,23 @@ details p{padding:0 24px 22px;color:var(--muted);font-size:16.5px}
   .mdl{max-width:none;border-radius:26px 26px 0 0;max-height:92dvh}
   .ribbon{padding-right:40px;font-size:12.5px}
 }
+
+/* ---- imagens ilustrativas (Pexels, licença gratuita) ---- */
+.ph-band{padding:0 0 clamp(40px,6vw,80px)}
+.ph-band figure{margin:0;position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:21/8;max-height:420px;background:var(--surface-2)}
+.ph-band img{width:100%;height:100%;object-fit:cover;display:block}
+.ph-band figcaption{position:absolute;right:14px;bottom:12px;font-size:11px;background:rgba(0,0,0,.45);color:#fff;padding:3px 10px;border-radius:999px}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.17;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,#000 35%,transparent);mask-image:linear-gradient(180deg,#000 35%,transparent)}
+.ad-hero .wrap,.ps-hero .wrap{position:relative;z-index:1}
+.dn-art{overflow:hidden}
+.dn-art img{width:100%;height:100%;object-fit:cover;display:block}
+.dn-bento .b1{position:relative;overflow:hidden}
+.dn-bento .b1>*:not(.b-bg){position:relative}
+.dn-bento .b-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32}
+.es-arch img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit}
+.nu-plate{overflow:hidden}
+.nu-plate img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%}
+.pe-slash{overflow:hidden}
+.pe-slash img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply;opacity:.92}
+@media (max-width:700px){.ph-band figure{aspect-ratio:16/10}}
+.ps-hero .hero-bg{opacity:.3}
