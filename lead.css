@@ -165,3 +165,10 @@ body.lf-lock{ overflow:hidden; }
   .plan.feature{transform:none;order:-1}
   .plan .pd{min-height:0}
 }
+
+.plan .pi .pi-sub{display:block;margin-top:2px;font-size:13px;font-weight:500;color:var(--muted)}
+.custom-plan{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:20px;padding:28px 32px;border-radius:26px;border:1px dashed var(--line-strong);background:linear-gradient(180deg,rgba(27,19,56,.45),rgba(14,10,31,.25))}
+.custom-plan h3{font-size:clamp(21px,2.4vw,26px);margin-bottom:6px}
+.custom-plan p{color:var(--muted);font-size:15.5px;max-width:640px}
+.custom-plan .btn{flex-shrink:0}
+@media (max-width:760px){.custom-plan{flex-direction:column;align-items:stretch;text-align:left;padding:24px 22px}.custom-plan .btn{justify-content:center}}

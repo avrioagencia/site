@@ -1,0 +1,36 @@
+/* Assistente de atendimento da Ávrio (site institucional) */
+.ag-fab{position:fixed;right:22px;bottom:96px;z-index:91;display:flex;align-items:center;gap:10px;padding:0 20px 0 14px;height:54px;border-radius:999px;border:none;cursor:pointer;color:#fff;font:700 15px var(--font-b,system-ui);background:var(--grad);box-shadow:0 16px 40px -12px rgba(143,60,252,.9);transition:transform .25s,box-shadow .25s}
+.ag-fab:hover{transform:translateY(-3px);box-shadow:0 22px 46px -12px rgba(143,60,252,1)}
+.ag-fab svg{width:24px;height:24px;flex:none}
+.ag-fab .dot{position:absolute;top:8px;left:36px;width:11px;height:11px;border-radius:50%;background:#3ddc97;border:2px solid #130d2b}
+.ag-tease{position:fixed;right:22px;bottom:162px;z-index:91;max-width:250px;padding:12px 16px;border-radius:18px 18px 4px 18px;background:var(--surface-2);color:var(--text);border:1px solid var(--line-strong);font:600 14px/1.4 var(--font-b,system-ui);box-shadow:0 20px 40px -20px #000;opacity:0;transform:translateY(8px);pointer-events:none;transition:.35s}
+.ag-tease.show{opacity:1;transform:none;pointer-events:auto;cursor:pointer}
+.ag-win{position:fixed;right:22px;bottom:162px;z-index:150;width:min(390px,calc(100vw - 28px));height:min(580px,calc(100dvh - 190px));display:flex;flex-direction:column;overflow:hidden;border-radius:24px;border:1px solid var(--line-strong);background:var(--surface);color:var(--text);box-shadow:0 40px 90px -30px rgba(0,0,0,.8);opacity:0;transform:translateY(16px) scale(.97);pointer-events:none;transition:opacity .3s,transform .3s,height .25s}
+.ag-win.open{opacity:1;transform:none;pointer-events:auto}
+.ag-win.min{height:66px;cursor:pointer}
+.ag-win.min .ag-body,.ag-win.min .ag-qr,.ag-win.min .ag-form,.ag-win.min .ag-foot{display:none}
+.ag-h{display:flex;align-items:center;gap:12px;padding:14px 16px;background:linear-gradient(115deg,#4a1fd6,#8f3cfc 60%,#d02fb0);color:#fff}
+.ag-av{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.18);flex:none}
+.ag-av svg{width:22px;height:22px}
+.ag-h b{display:block;font:700 15.5px var(--font-d,system-ui)}
+.ag-h small{display:block;font-size:12px;opacity:.85}
+.ag-x{margin-left:auto;width:32px;height:32px;border:none;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;font-size:20px;line-height:1;cursor:pointer}
+.ag-body{flex:1;overflow-y:auto;padding:16px 14px;display:flex;flex-direction:column;gap:9px;scroll-behavior:smooth}
+.ag-m{max-width:86%;padding:10px 14px;border-radius:16px;font:500 14.5px/1.45 var(--font-b,system-ui);white-space:pre-wrap;word-wrap:break-word}
+.ag-m.bot{align-self:flex-start;background:var(--surface-3);border-bottom-left-radius:4px}
+.ag-m.me{align-self:flex-end;background:var(--grad);color:#fff;border-bottom-right-radius:4px}
+.ag-m a{color:#d9b8ff;text-decoration:underline}
+.ag-m.typing{display:flex;gap:4px;padding:14px 16px}
+.ag-m.typing i{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:agb 1s infinite}
+.ag-m.typing i:nth-child(2){animation-delay:.15s}.ag-m.typing i:nth-child(3){animation-delay:.3s}
+@keyframes agb{0%,60%,100%{transform:none;opacity:.5}30%{transform:translateY(-5px);opacity:1}}
+.ag-qr{display:flex;flex-wrap:wrap;gap:8px;padding:0 14px 10px}
+.ag-qr button{padding:8px 14px;border-radius:999px;border:1px solid var(--line-strong);background:transparent;color:var(--text);font:600 13.5px var(--font-b,system-ui);cursor:pointer;transition:.2s}
+.ag-qr button:hover{border-color:var(--violet);background:rgba(143,60,252,.18)}
+.ag-form{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line-strong);background:var(--surface-2)}
+.ag-form input{flex:1;min-width:0;padding:11px 14px;border-radius:999px;border:1px solid var(--line-strong);background:var(--surface);color:var(--text);font:500 15px var(--font-b,system-ui);outline:none}
+.ag-form input:focus{border-color:var(--violet)}
+.ag-form button{width:42px;height:42px;border:none;border-radius:50%;background:var(--grad);color:#fff;cursor:pointer;font-size:17px}
+.ag-foot{padding:6px 14px 10px;text-align:center;font-size:11.5px;color:var(--dim);background:var(--surface-2)}
+@media (max-width:640px){.ag-fab{right:14px;bottom:88px;height:50px;padding:0 16px 0 12px}.ag-fab .dot{left:32px}.ag-win{right:14px;bottom:150px;height:min(560px,calc(100dvh - 170px))}.ag-tease{right:14px;bottom:148px}}
+@media (prefers-reduced-motion:reduce){.ag-win,.ag-tease,.ag-fab{transition:none}.ag-m.typing i{animation:none}}
