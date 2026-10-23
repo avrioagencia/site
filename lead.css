@@ -172,3 +172,30 @@ body.lf-lock{ overflow:hidden; }
 .custom-plan p{color:var(--muted);font-size:15.5px;max-width:640px}
 .custom-plan .btn{flex-shrink:0}
 @media (max-width:760px){.custom-plan{flex-direction:column;align-items:stretch;text-align:left;padding:24px 22px}.custom-plan .btn{justify-content:center}}
+
+/* ---- formulário: cabe em telas baixas; botões sempre visíveis; rolagem só nas perguntas ---- */
+.lf-panel{ display:flex; flex-direction:column; overflow:hidden; padding:clamp(22px,4vh,40px) clamp(22px,5vw,40px) clamp(18px,3vh,30px); }
+.lf-panel #lfForm{ display:flex; flex-direction:column; flex:1 1 auto; min-height:0; }
+.lf-panel .lf-step{ flex:1 1 auto; min-height:0; overflow-y:auto; padding:2px 6px 8px 2px; margin-right:-6px; scrollbar-width:thin; scrollbar-color:rgba(143,60,252,.55) transparent; }
+.lf-panel .lf-step::-webkit-scrollbar{ width:6px; }
+.lf-panel .lf-step::-webkit-scrollbar-thumb{ background:rgba(143,60,252,.55); border-radius:6px; }
+.lf-panel .lf-step::-webkit-scrollbar-track{ background:transparent; }
+.lf-panel .lf-meta, .lf-panel .lf-progress{ flex:none; }
+.lf-panel .lf-nav{ flex:none; margin-top:10px; padding-top:12px; border-top:1px solid var(--line); }
+@media (max-height:760px){
+  .lf-panel{ padding-top:20px; padding-bottom:16px; }
+  .lf-meta{ margin-bottom:12px; }
+  .lf-step h3{ font-size:clamp(21px,3.4vw,26px); margin-bottom:6px; }
+  .lf-sub{ font-size:14.5px; margin-bottom:12px; }
+  .lf-field{ margin-bottom:10px; }
+  .lf-field input{ padding:12px 16px; font-size:16px; }
+  .lf-options button{ padding:12px 16px; font-size:15px; }
+  .lf-legal{ font-size:12px; }
+  .lf-next{ padding:12px 22px; }
+}
+@media (max-height:600px){
+  .lf-panel{ padding-top:16px; }
+  .lf-step h3{ font-size:20px; }
+  .lf-sub{ display:none; }
+  .lf-field input{ padding:10px 14px; }
+}
