@@ -14,7 +14,7 @@
   const biz = clean(q.get('n')) || N.biz;
   const pro = clean(q.get('p')) || N.pro;
   const city = clean(q.get('cid')) || N.city;
-  const tel = (q.get('tel') || '').replace(/\D/g, '');
+  const tel = (q.get('tel') || window.AVRIO_TEL || '').replace(/\D/g, '');
   const gnum = clean(q.get('g'), 5);
   const grev = clean(q.get('r'), 6);
   const DEMO = q.get('demo') !== '0';
@@ -62,7 +62,7 @@
 
   // ---------- WhatsApp do cliente (produção) ou do prospect (demo) ----------
   function targetWa(text) {
-    const to = DEMO ? AVRIO_WA : (tel || AVRIO_WA);
+    const to = tel || AVRIO_WA;
     return 'https://wa.me/' + to + '?text=' + encodeURIComponent(text);
   }
 
@@ -141,7 +141,7 @@
     $('#prev').firstChild.textContent = text;
     $('#doneBiz').textContent = biz;
     const go = $('#doneGo');
-    if (DEMO) {
+    if (DEMO && !tel) {
       go.textContent = 'Quero este site para mim';
       go.href = 'https://wa.me/' + AVRIO_WA + '?text=' + encodeURIComponent('Olá! Testei a demonstração do site para ' + biz + ' e quero um site assim para o meu consultório.');
       $('#doneNote').textContent = 'Esta é uma demonstração: nenhum dado foi enviado.';
@@ -180,6 +180,10 @@
       b.addEventListener('click', () => {
         say(it.label, 'me'); qr.innerHTML = '';
         if (it.action === 'book') { botSay('Perfeito! Vou abrir o agendamento para você.', () => { closeChat(); openModal(''); }); return; }
+        if (it.action === 'human' && tel) {
+          botSay('Claro! Vou te levar ao WhatsApp para falar direto com ' + pro + '.', () => { window.open(targetWa('Olá! Vim pelo site e gostaria de falar com ' + pro + '.'), '_blank', 'noopener'); renderQr(N.chat.menu); });
+          return;
+        }
         if (it.action === 'human') {
           botSay('Claro! Vou chamar um atendente. Na versão real, a conversa continua no WhatsApp com o histórico já registrado.', () => renderQr(N.chat.menu));
           return;
