@@ -34,3 +34,14 @@
 .ag-foot{padding:6px 14px 10px;text-align:center;font-size:11.5px;color:var(--dim);background:var(--surface-2)}
 @media (max-width:640px){.ag-fab{right:14px;bottom:88px;height:50px;padding:0 16px 0 12px}.ag-fab .dot{left:32px}.ag-win{right:14px;bottom:150px;height:min(560px,calc(100dvh - 170px))}.ag-tease{right:14px;bottom:148px}}
 @media (prefers-reduced-motion:reduce){.ag-win,.ag-tease,.ag-fab{transition:none}.ag-m.typing i{animation:none}}
+
+/* layout enxuto: a barra minimizada ocupa o lugar do botão, logo acima do WhatsApp */
+.ag-win{bottom:96px;height:min(580px,calc(100dvh - 124px))}
+.ag-on .ag-fab,.ag-on .ag-tease{display:none}
+.ag-win.min{width:min(290px,calc(100vw - 28px));height:58px;border-radius:999px;box-shadow:0 16px 40px -12px rgba(143,60,252,.9)}
+.ag-win.min .ag-h{height:100%;padding:0 12px 0 10px;gap:10px;border-radius:999px}
+.ag-win.min .ag-av{width:34px;height:34px;border-radius:50%}
+.ag-win.min .ag-h small{display:none}
+.ag-win.min .ag-x{font-size:0;position:relative}
+.ag-win.min .ag-x::before{content:"91";font-size:17px}
+@media (max-width:640px){.ag-win{bottom:88px;height:min(560px,calc(100dvh - 112px))}}

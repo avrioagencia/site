@@ -21,6 +21,7 @@
 
   const fab = $('#agFab'), win = $('#agWin'), body = $('#agBody'), qr = $('#agQr'), form = $('#agForm'), inp = $('#agIn'), tease = $('#agTease');
   let log = [], hist = [], started = false, open = false, min = false, busy = false;
+  const sync = () => document.body.classList.toggle('ag-on', win.classList.contains('open'));
 
   const save = () => { try { sessionStorage.setItem(SK, JSON.stringify({ log: log.slice(-30), open, min })); } catch (e) {} };
   const linkify = (t) => t.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
@@ -67,7 +68,7 @@
   function openForm(src) { const b = $('#agOpenForm'); b.dataset.openForm = src || 'assistente'; b.click(); }
 
   function openChat() {
-    win.classList.add('open'); win.classList.remove('min'); fab.setAttribute('aria-expanded', 'true'); open = true; min = false; tease.classList.remove('show'); save();
+    win.classList.add('open'); win.classList.remove('min'); fab.setAttribute('aria-expanded', 'true'); open = true; min = false; tease.classList.remove('show'); sync(); save();
     if (!started) {
       started = true;
       botSay('Olá! Sou o assistente virtual da Ávrio, uma inteligência artificial. Posso explicar os planos, como funciona e te ajudar a marcar uma conversa de 10 minutos com o Gabriel.', renderQr);
@@ -114,7 +115,7 @@
       else if (hist.length) hist.push({ role: 'assistant', content: m.t });
     });
     renderQr();
-    if (saved.open) { win.classList.add('open'); open = true; if (saved.min) { win.classList.add('min'); min = true; } else fab.setAttribute('aria-expanded', 'true'); }
+    if (saved.open) { win.classList.add('open'); open = true; sync(); if (saved.min) { win.classList.add('min'); min = true; } else fab.setAttribute('aria-expanded', 'true'); }
   } else {
     // convite discreto, uma vez por sessão, depois que o formulário inicial já passou
     setTimeout(() => { if (!win.classList.contains('open') && !document.querySelector('.lf-overlay.open')) tease.classList.add('show'); }, 14000);
