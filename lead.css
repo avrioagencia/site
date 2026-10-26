@@ -202,3 +202,5 @@ body.lf-lock{ overflow:hidden; }
 
 .plan .why{margin:0 0 16px;padding:11px 13px;border-radius:12px;background:rgba(251,59,201,.08);border:1px solid rgba(251,59,201,.24);color:#ffd2f1;font-size:13.5px;line-height:1.45}
 .plan .why b{color:#fff}
+
+.hero-fine{max-width:620px;margin-top:14px;font-size:12px;line-height:1.5;color:var(--dim,#7d72a0)}
