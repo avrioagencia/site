@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Demonstração de site para imobiliária · Agência Ávrio</title>
+<meta name="description" content="Veja como ficaria o site do seu consultório, com agendamento e atendimento automático. Demonstração criada pela Agência Ávrio.">
+<meta property="og:title" content="Demonstração de site para imobiliária · Agência Ávrio">
+<meta property="og:description" content="Veja como ficaria o site do seu consultório, com agendamento e atendimento automático.">
+<meta name="theme-color" content="#E8590C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../base.css?v=202610261019">
+<link rel="stylesheet" href="../imobiliaria.css?v=202610261019">
+<style>:root{--bg:#F3F5FA;--surface:#FFFFFF;--surface-2:#E6EBF5;--ink:#0B1B3A;--muted:#53607A;--primary:#E8590C;--primary-2:#B74509;--on-primary:#FFFFFF;--glow:rgba(232,89,12,.22);--line:rgba(11,27,58,.10);--line-2:rgba(11,27,58,.20);--font-h:'Outfit',system-ui,sans-serif;--font-b:'Inter',system-ui,sans-serif;--hw:700;--btn-r:12px;--radius:18px;}</style>
+</head>
+<body class="lay-imobiliaria">
+<div class="ribbon" id="ribbon">
+  <span>Demonstração criada pela <b>Ávrio</b> para <b data-bind="biz">Horizonte Imóveis</b> · textos e imagens de exemplo</span>
+  <a class="ribbon-btn" id="ribbonCta" href="#" target="_blank" rel="noopener">Quero este site</a>
+  <button type="button" id="ribbonX" aria-label="Fechar aviso">×</button>
+</div>
+
+<header class="im-head"><div class="wrap">
+  <a class="logo" href="#topo"><span class="mk"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M10 21v-3h4v3"/></svg></span><span data-bind="biz">Horizonte Imóveis</span></a>
+  <nav class="nav im-nav" id="nav"><a href="#imoveis">Imóveis</a><a href="#atendimento">Atendimento</a><a href="#como">Como funciona</a><a href="#equipe">Equipe</a><a href="#duvidas">Dúvidas</a></nav>
+  <button type="button" class="btn btn-p btn-sm" data-book="">Falar com um consultor</button><button type="button" class="burger" id="burger" aria-label="Abrir menu"><svg class="ico" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+<main id="topo">
+<section class="im-hero"><img class="hero-bg" src="../img/im-1.jpg" alt="Prédios de exemplo" loading="lazy" decoding="async"><div class="im-shade"></div><div class="wrap im-hero-in">
+  <div class="im-copy rv">
+    <span class="eyebrow">Imobiliária · <span data-bind="city">sua cidade</span></span>
+    <h1>O imóvel certo para <em>cada fase da vida.</em></h1>
+    <p class="lead">Venda, compra e locação com uma equipe que responde cada interessado na hora, de segunda a sábado.</p>
+    <div class="im-search" data-im><label><span>Eu quero</span><select id="imSel" aria-label="Eu quero"><option>Comprar um imóvel</option><option>Alugar um imóvel</option><option>Vender o meu imóvel</option><option>Lançamentos</option><option>Administração de aluguéis</option></select></label>
+      <button type="button" class="btn btn-p" data-im-go>Falar com um consultor <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+  </div>
+</div></section>
+<section class="im-stats"><div class="wrap"><div><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>Retorno rápido</b><span>cada interessado é respondido</span></div><div><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3"/><path d="M3.5 20c0-3.2 2.5-5.2 5.5-5.2s5.5 2 5.5 5.2"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.8c2.9 0 4.8 1.7 4.8 4.4"/></svg><b>Equipe de consultores</b><span>atendimento de seg a sáb</span></div><div><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg><b>Contrato claro</b><span>etapas e custos explicados</span></div><div><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg><b>Processo organizado</b><span>nenhum contato se perde</span></div></div></section>
+<section class="sec" id="imoveis"><div class="wrap">
+  <div class="im-sh rv"><span class="eyebrow">Imóveis</span><h2>Exemplos do que você encontra</h2><p>Imóveis e valores de exemplo para esta demonstração.</p></div>
+  <div class="im-grid"><article class="im-card rv"><div class="ph"><img src="../img/im-2.jpg" alt="Imóvel de exemplo" loading="lazy" decoding="async"><span class="tg">Venda</span></div><div class="bd"><h3>Apartamento 3 quartos</h3><p>Varanda · 2 vagas</p><small><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.8 7-11a7 7 0 10-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Centro</small><button type="button" class="im-link" data-book="Visita: Apartamento 3 quartos">Quero ver este imóvel</button></div></article><article class="im-card rv"><div class="ph"><img src="../img/im-3.jpg" alt="Imóvel de exemplo" loading="lazy" decoding="async"><span class="tg">Locação</span></div><div class="bd"><h3>Apartamento compacto</h3><p>1 quarto · mobiliado</p><small><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.8 7-11a7 7 0 10-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Setor Sul</small><button type="button" class="im-link" data-book="Visita: Apartamento compacto">Quero ver este imóvel</button></div></article><article class="im-card rv"><div class="ph"><img src="../img/im-4.jpg" alt="Imóvel de exemplo" loading="lazy" decoding="async"><span class="tg">Venda</span></div><div class="bd"><h3>Casa em condomínio</h3><p>4 quartos · lazer completo</p><small><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.8 7-11a7 7 0 10-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Condomínio Verde</small><button type="button" class="im-link" data-book="Visita: Casa em condomínio">Quero ver este imóvel</button></div></article><article class="im-card rv"><div class="ph"><img src="../img/im-3.jpg" alt="Imóvel de exemplo" loading="lazy" decoding="async"><span class="tg">Venda</span></div><div class="bd"><h3>Cobertura duplex</h3><p>3 suítes · terraço</p><small><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.8 7-11a7 7 0 10-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Orla</small><button type="button" class="im-link" data-book="Visita: Cobertura duplex">Quero ver este imóvel</button></div></article><article class="im-card rv"><div class="ph"><img src="../img/im-2.jpg" alt="Imóvel de exemplo" loading="lazy" decoding="async"><span class="tg">Locação</span></div><div class="bd"><h3>Sala comercial</h3><p>Andar alto · 2 vagas</p><small><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.8 7-11a7 7 0 10-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Centro Empresarial</small><button type="button" class="im-link" data-book="Visita: Sala comercial">Quero ver este imóvel</button></div></article><article class="im-card rv"><div class="ph"><img src="../img/im-4.jpg" alt="Imóvel de exemplo" loading="lazy" decoding="async"><span class="tg">Venda</span></div><div class="bd"><h3>Casa térrea</h3><p>3 quartos · quintal</p><small><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.8 7-11a7 7 0 10-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Bairro Novo</small><button type="button" class="im-link" data-book="Visita: Casa térrea">Quero ver este imóvel</button></div></article></div>
+</div></section>
+<section class="im-band"><div class="wrap rv"><div><h2>Tem um imóvel para vender ou alugar?</h2><p>Fazemos a avaliação e a divulgação, e cada interessado recebe retorno rápido.</p></div><button type="button" class="btn im-btn-w" data-book="Vender seu imóvel">Quero anunciar <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></section>
+<section class="sec" id="atendimento"><div class="wrap">
+  <div class="im-sh rv"><span class="eyebrow">Atendimento</span><h2>Tudo em um só lugar</h2><p>Da busca à assinatura, com equipe e processo.</p></div>
+  <div class="im-svcs"><article class="im-svc rv"><span class="im-ic"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-6h4v6"/></svg></span><div><h3>Comprar</h3><p>Seleção de imóveis alinhada ao seu perfil.</p></div><button type="button" class="im-link" data-book="Comprar">Saber mais</button></article><article class="im-svc rv"><span class="im-ic"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3M14 9l2 2"/></svg></span><div><h3>Alugar</h3><p>Locação com análise e contrato claros.</p></div><button type="button" class="im-link" data-book="Alugar">Saber mais</button></article><article class="im-svc rv"><span class="im-ic"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.3"/></svg></span><div><h3>Vender seu imóvel</h3><p>Avaliação, divulgação e negociação.</p></div><button type="button" class="im-link" data-book="Vender seu imóvel">Saber mais</button></article><article class="im-svc rv"><span class="im-ic"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg></span><div><h3>Administração</h3><p>Gestão de aluguéis para proprietários.</p></div><button type="button" class="im-link" data-book="Administração">Saber mais</button></article><article class="im-svc rv"><span class="im-ic"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5h6v2M3 13h18"/></svg></span><div><h3>Financiamento</h3><p>Apoio nas etapas e na documentação.</p></div><button type="button" class="im-link" data-book="Financiamento">Saber mais</button></article><article class="im-svc rv"><span class="im-ic"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M10 21v-3h4v3"/></svg></span><div><h3>Lançamentos</h3><p>Empreendimentos e condições de entrada.</p></div><button type="button" class="im-link" data-book="Lançamentos">Saber mais</button></article></div>
+</div></section>
+<section class="sec im-alt" id="como"><div class="wrap">
+  <div class="im-sh rv"><span class="eyebrow">Como funciona</span><h2>Da busca ao contrato</h2></div>
+  <ol class="im-steps"><li class="rv"><i>01</i><h3>Atendimento</h3><p>Um consultor entende o que você precisa.</p></li><li class="rv"><i>02</i><h3>Seleção</h3><p>Imóveis filtrados e enviados para você.</p></li><li class="rv"><i>03</i><h3>Visita</h3><p>Agenda de visita no melhor horário.</p></li><li class="rv"><i>04</i><h3>Contrato</h3><p>Negociação e documentação acompanhadas.</p></li></ol>
+</div></section>
+<section class="sec" id="equipe"><div class="wrap">
+  <div class="im-sh rv"><span class="eyebrow">Equipe</span><h2>Uma equipe, um processo</h2><p>Atendimento organizado: cada interessado recebe retorno rápido e fica registrado, sem contato perdido.</p><p>Consultores treinados para ouvir primeiro e indicar depois.</p></div>
+  <div class="im-teams"><article class="im-team rv"><span class="av">A</span><b>Consultor(a) A</b><small><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> atende pelo WhatsApp</small></article><article class="im-team rv"><span class="av">B</span><b>Consultor(a) B</b><small><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> atende pelo WhatsApp</small></article><article class="im-team rv"><span class="av">C</span><b>Consultor(a) C</b><small><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg> atende pelo WhatsApp</small></article></div>
+</div></section>
+<section class="sec g-sec" id="gSec" hidden>
+  <div class="wrap"><div class="g-card rv">
+    <div><div class="g-num" id="gNum">5,0</div><div class="g-stars" aria-label="Nota no Google"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div></div>
+    <div class="g-txt"><h3 style="font-size:24px">Avaliado no Google</h3><p id="gTxt">Avaliações reais de quem já foi atendido.</p>
+    <a class="btn btn-g btn-sm" href="#" target="_blank" rel="noopener">Ver avaliações no Google</a></div>
+  </div></div>
+</section>
+<section class="sec im-alt" id="duvidas"><div class="wrap">
+  <div class="im-sh c rv"><span class="eyebrow">Dúvidas</span><h2>Perguntas frequentes</h2></div>
+  <div class="faq rv"><details><summary>Como falo com um consultor?</summary><p>Pelo WhatsApp ou pelo formulário. Retornamos rapidamente.</p></details><details><summary>Vocês trabalham com locação?</summary><p>Sim, com análise de ficha e contrato claros.</p></details><details><summary>Posso anunciar meu imóvel?</summary><p>Sim. Fazemos a avaliação e a divulgação.</p></details><details><summary>Atendem lançamentos?</summary><p>Sim, com informações de entrada e condições de pagamento.</p></details><details><summary>Os valores são fixos?</summary><p>Valores e disponibilidade variam e são confirmados no atendimento.</p></details></div>
+</div></section>
+<section class="im-cta" id="contato"><div class="wrap rv"><h2>Vamos encontrar o seu próximo imóvel?</h2><p>Fale com um consultor pelo WhatsApp. Leva menos de um minuto.</p><button type="button" class="btn btn-p" data-book="">Falar com um consultor <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></section>
+</main>
+<script>(function(){var b=document.querySelector('[data-im-go]');if(b)b.addEventListener('click',function(){window.AvrioBook&&window.AvrioBook(document.getElementById('imSel').value)})})();</script>
+
+<footer class="ftr"><div class="wrap">
+  <div class="row"><span><b data-bind="biz">Horizonte Imóveis</b> · CRECI-J 0000. Imóveis, valores e condições de exemplo; consulte disponibilidade e condições no atendimento.</span></div>
+  <div class="row"><span class="credit">Site com agente de atendimento por <a href="https://wa.me/5563984600461" target="_blank" rel="noopener">Agência Ávrio</a></span><span>Política de privacidade</span></div>
+</div></footer>
+
+<button type="button" class="fab" id="fab" aria-label="Abrir assistente de atendimento" aria-expanded="false"><span class="tip">Fale com a gente</span>
+  <svg class="ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.11.56 4.17 1.62 5.98L4 28l7.25-1.9a12.1 12.1 0 0 0 4.79 1c6.64 0 12.04-5.37 12.04-11.97C28.08 8.36 22.68 3 16.04 3Zm0 21.9a10 10 0 0 1-5.1-1.4l-.37-.22-4.3 1.13 1.15-4.17-.24-.38a9.8 9.8 0 0 1-1.5-5.2c0-5.44 4.46-9.87 9.96-9.87 5.5 0 9.96 4.43 9.96 9.87 0 5.44-4.46 9.88-9.96 9.88Zm5.46-7.4c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.63-.93-2.24-.24-.58-.5-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1-1.04 2.46 0 1.45 1.07 2.86 1.22 3.06.15.2 2.1 3.2 5.08 4.48.71.3 1.27.49 1.7.62.72.23 1.37.2 1.88.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg></button>
+<div class="sticky" id="sticky"><button type="button" class="btn btn-p" data-book="">Falar com um consultor <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+
+<section class="chat" id="chat" role="dialog" aria-label="Assistente virtual">
+  <div class="ch-h"><span class="av"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span><div><b>Assistente <span data-bind="biz">Horizonte Imóveis</span></b><span>Assistente virtual · responde na hora</span></div><button type="button" id="chX" aria-label="Minimizar assistente">&#8211;</button></div>
+  <div class="ch-b" id="chBody"></div>
+  <div class="qr" id="chQr"></div>
+  <form class="ch-in" id="chForm" hidden><input id="chInput" type="text" maxlength="300" placeholder="Digite sua dúvida..." autocomplete="off" aria-label="Digite sua dúvida"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+  <div class="ch-f">Demonstração do assistente com IA da Ávrio</div>
+</section>
+
+<div class="ov" id="ov" hidden>
+  <div class="mdl" role="dialog" aria-modal="true" aria-label="Agendamento">
+    <button type="button" class="x" id="mx" aria-label="Fechar">×</button>
+    <div class="bar"><i id="mbar"></i></div>
+    <div class="stp" id="mstp">Passo 1 de 3</div>
+    <div class="pane">
+      <h3>O que você gostaria de agendar?</h3>
+      <p class="sub">Escolha uma opção. Você confirma os detalhes no atendimento.</p>
+      <div class="opts" id="svcOpts"><button type="button" data-v="Comprar">Comprar</button><button type="button" data-v="Alugar">Alugar</button><button type="button" data-v="Vender seu imóvel">Vender seu imóvel</button><button type="button" data-v="Administração">Administração</button><button type="button" data-v="Financiamento">Financiamento</button><button type="button" data-v="Lançamentos">Lançamentos</button></div>
+    </div>
+    <div class="pane" hidden>
+      <h3>Como podemos te chamar?</h3>
+      <p class="sub">Usamos apenas para entrar em contato sobre o seu agendamento.</p>
+      <label class="fld"><span>Seu nome</span><input id="fName" type="text" placeholder="Nome e sobrenome" autocomplete="name"></label>
+      <label class="fld"><span>WhatsApp (com DDD)</span><input id="fPhone" type="tel" inputmode="tel" placeholder="(00) 00000-0000" autocomplete="tel"></label>
+      <p class="err" role="alert"></p>
+    </div>
+    <div class="pane" hidden>
+      <h3>Qual período é melhor para você?</h3>
+      <p class="sub">Confirmamos o horário exato pelo WhatsApp.</p>
+      <div class="opts one" id="turnOpts"><button type="button" data-v="Manhã">Manhã</button><button type="button" data-v="Tarde">Tarde</button><button type="button" data-v="Noite">Noite</button></div>
+    </div>
+    <div class="pane" hidden>
+      <div class="okc"><svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="26" cy="26" r="24"/><path d="M15 27l8 8 14-16"/></svg></div>
+      <h3 style="text-align:center">Pedido pronto!</h3>
+      <p class="sub" style="text-align:center">Assim a mensagem chegaria no WhatsApp de <b id="doneBiz"></b>:</p>
+      <div class="wa-prev" id="prev">x<small>agora · mensagem automática</small></div>
+      <a class="btn btn-p" id="doneGo" href="#" target="_blank" rel="noopener" style="width:100%">Continuar</a>
+      <p class="note" id="doneNote"></p>
+    </div>
+    <div class="mnav" id="mnav" hidden>
+      <button type="button" class="back" id="mback">← Voltar</button>
+      <button type="button" class="btn btn-p btn-sm" id="mnext">Continuar</button>
+    </div>
+  </div>
+</div>
+
+<script>window.NICHE={"slug": "imobiliaria", "biz": "Horizonte Imóveis", "pro": "Equipe Horizonte", "city": "sua cidade", "label": "imobiliária", "titleTail": "Imobiliária", "chat": {"hello": "Olá! Sou o assistente virtual da {biz}. Posso ajudar com imóveis, visitas e atendimento.", "disclaimer": "Sou uma IA e não fecho negócio. Um consultor confirma valores e condições.", "menu": [{"label": "Horários", "answer": "Atendemos de segunda a sábado, das 8h às 19h. Quer agendar uma visita?"}, {"label": "Serviços", "answer": "Compra, locação, venda, administração de imóveis, financiamento e lançamentos."}, {"label": "Valores", "answer": "Valores e condições são informados pelo consultor. Posso marcar uma conversa?"}, {"label": "Agendar", "action": "book"}, {"label": "Falar com atendente", "action": "human"}]}};window.AVRIO_CHAT_URL="https://avrio-chat.avrio-chat.workers.dev";</script>
+<script src="../demo.js?v=202610261019"></script>
+<script src="../layouts.js?v=202610261019"></script>
+</body>
+</html>

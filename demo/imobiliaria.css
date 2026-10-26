@@ -1,0 +1,59 @@
+/* Layout IMOBILIÁRIA — hero com foto de prédios, busca em vidro, grade de imóveis, banda laranja */
+.logo{display:flex;align-items:center;gap:11px;font-family:var(--font-h);font-weight:800;font-size:21px;color:#fff}
+.logo .mk{width:38px;height:38px;border-radius:10px;background:var(--primary);color:#fff;display:grid;place-items:center;font-size:20px}
+.nav{display:flex;align-items:center;gap:26px;font-size:14.5px;font-weight:600;color:rgba(255,255,255,.78)}
+.nav a:hover{color:#fff}
+.im-head{position:sticky;top:0;z-index:100;background:#0B1B3A;border-bottom:1px solid rgba(255,255,255,.08)}
+.im-head .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;height:68px;gap:18px}
+.im-head .burger{color:#fff;border-color:rgba(255,255,255,.3)}
+.im-hero{position:relative;color:#fff;padding:clamp(70px,11vw,160px) 0 clamp(70px,10vw,140px);overflow:hidden;min-height:560px;display:flex;align-items:center}
+.im-hero .hero-bg{opacity:1;-webkit-mask-image:none;mask-image:none;z-index:0}
+.im-shade{position:absolute;inset:0;background:linear-gradient(95deg,rgba(11,27,58,.92) 18%,rgba(11,27,58,.55) 60%,rgba(11,27,58,.25));z-index:1}
+.im-hero-in{position:relative;z-index:2;width:100%}
+.im-copy{max-width:640px}
+.im-copy .eyebrow{color:#FFB98A}
+.im-copy h1{font-size:clamp(40px,6vw,76px);line-height:1;margin:16px 0 18px;font-weight:800}
+.im-copy h1 em{font-style:normal;color:var(--primary)}
+.im-copy .lead{color:rgba(255,255,255,.85);font-size:clamp(17px,1.8vw,20px)}
+.im-search{display:flex;align-items:flex-end;gap:12px;margin-top:28px;padding:14px;border-radius:18px;background:rgba(255,255,255,.14);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.28)}
+.im-search label{flex:1;min-width:0}
+.im-search label span{display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.8);margin:0 0 6px 4px}
+.im-search select{width:100%;padding:13px 14px;border-radius:12px;border:0;background:#fff;color:#0B1B3A;font:inherit;font-weight:600;font-size:16px}
+.im-stats{background:#fff;border-bottom:1px solid var(--line)}
+.im-stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.im-stats .wrap>div{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;padding:22px 16px;border-left:1px solid var(--line)}
+.im-stats .wrap>div:first-child{border-left:0}
+.im-stats .ico{grid-row:span 2;font-size:30px;color:var(--primary)}
+.im-stats b{font-size:15px;line-height:1.2}.im-stats span{font-size:13px;color:var(--muted)}
+.im-sh{max-width:680px;margin-bottom:clamp(26px,4vw,44px)}.im-sh.c{margin:0 auto 40px;text-align:center}
+.im-sh h2{font-size:clamp(30px,4vw,46px);margin:12px 0 10px;font-weight:800}.im-sh p{color:var(--muted);font-size:18px;margin-bottom:10px}
+.im-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.im-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.3s}
+.im-card:hover{transform:translateY(-5px);box-shadow:0 30px 56px -38px #0B1B3A}
+.im-card .ph{position:relative;aspect-ratio:16/11;overflow:hidden}.im-card .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.im-card .tg{position:absolute;left:12px;top:12px;padding:4px 12px;border-radius:8px;background:var(--primary);color:#fff;font-size:12px;font-weight:800}
+.im-card .bd{padding:18px 20px 20px}.im-card h3{font-size:20px}.im-card p{color:var(--muted);font-size:14.5px}
+.im-card small{display:flex;align-items:center;gap:6px;color:var(--muted);margin:8px 0 14px}.im-card small .ico{font-size:15px;color:var(--primary)}
+.im-link{background:none;border:0;padding:0;color:var(--primary);font-weight:800;font-size:14.5px}.im-link:hover{color:var(--primary-2)}
+.im-band{background:linear-gradient(110deg,var(--primary),#FF8A3D);color:#fff;padding:clamp(34px,5vw,56px) 0}
+.im-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.im-band h2{font-size:clamp(26px,3.4vw,38px);font-weight:800}.im-band p{opacity:.92;margin-top:4px}
+.im-btn-w{background:#fff;color:var(--primary-2);font-weight:800}
+.im-svcs{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.im-svc{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;padding:20px 22px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line)}
+.im-ic{width:50px;height:50px;border-radius:14px;display:grid;place-items:center;background:var(--glow);color:var(--primary)}.im-ic .ico{font-size:25px}
+.im-svc h3{font-size:19px}.im-svc p{color:var(--muted);font-size:14.5px}
+.im-alt{background:var(--surface-2)}
+.im-steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
+.im-steps li{padding:22px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line)}
+.im-steps i{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--primary);color:#fff;font-style:normal;font-weight:800;margin-bottom:12px}
+.im-steps h3{font-size:19px;margin-bottom:4px}.im-steps p{color:var(--muted);font-size:14.5px}
+.im-teams{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.im-team{padding:24px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line);text-align:center;display:grid;gap:6px;justify-items:center}
+.im-team .av{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:#fff;font-family:var(--font-h);font-weight:800;font-size:26px}
+.im-team small{display:flex;align-items:center;gap:6px;color:var(--muted)}.im-team small .ico{font-size:15px}
+.faq{max-width:820px;margin:0 auto;display:grid;gap:12px}
+.im-cta{background:#0B1B3A;color:#fff;padding:clamp(56px,7vw,100px) 0;text-align:center}
+.im-cta h2{font-size:clamp(30px,4.4vw,50px);font-weight:800;margin-bottom:10px}.im-cta p{opacity:.85;font-size:19px;margin-bottom:26px}
+@media (max-width:900px){.im-grid,.im-teams{grid-template-columns:1fr 1fr}.im-svcs{grid-template-columns:1fr}.im-steps{grid-template-columns:1fr 1fr}.im-stats .wrap{grid-template-columns:1fr 1fr}.im-stats .wrap>div:nth-child(3){border-left:0}}
+@media (max-width:600px){.im-grid,.im-teams,.im-steps{grid-template-columns:1fr}.im-search{flex-direction:column;align-items:stretch}.im-svc{grid-template-columns:auto 1fr}.im-svc .im-link{grid-column:2}}

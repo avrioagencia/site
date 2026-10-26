@@ -199,3 +199,6 @@ body.lf-lock{ overflow:hidden; }
   .lf-sub{ display:none; }
   .lf-field input{ padding:10px 14px; }
 }
+
+.plan .why{margin:0 0 16px;padding:11px 13px;border-radius:12px;background:rgba(251,59,201,.08);border:1px solid rgba(251,59,201,.24);color:#ffd2f1;font-size:13.5px;line-height:1.45}
+.plan .why b{color:#fff}

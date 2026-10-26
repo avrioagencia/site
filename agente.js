@@ -10,7 +10,7 @@
   const root = document.createElement('div');
   root.innerHTML =
     '<button type="button" class="ag-fab" id="agFab" aria-label="Abrir o assistente da Ávrio" aria-expanded="false">' + ICON + '<span class="dot"></span><span>Assistente</span></button>' +
-    '<div class="ag-tease" id="agTease" role="status">Posso tirar suas dúvidas sobre os planos. Sou o assistente da Ávrio.</div>' +
+    '<div class="ag-tease" id="agTease" role="status">Quantos contatos você perde por semana? Posso te mostrar como atrair mais clientes.</div>' +
     '<section class="ag-win" id="agWin" role="dialog" aria-label="Assistente da Ávrio">' +
     '<div class="ag-h" id="agH"><span class="ag-av">' + ICON + '</span><div><b>Assistente Ávrio</b><small>Assistente virtual (IA) · responde na hora</small></div><button type="button" class="ag-x" id="agX" aria-label="Minimizar">&ndash;</button></div>' +
     '<div class="ag-body" id="agBody"></div><div class="ag-qr" id="agQr"></div>' +
@@ -42,7 +42,7 @@
   ];
   const ANS = {
     plans: 'Temos 3 planos, com implantação única + mensalidade:\n• Site + Assistente: R$ 597 (ou 3x de R$ 199 sem juros) + R$ 147/mês\n• Conteúdo + Site + Assistente (15 reels/mês): R$ 997 + R$ 997/mês\n• Site + Assistente + Tráfego: R$ 797 + R$ 897/mês (verba de anúncios à parte, mínimo R$ 500).\nQual deles faz mais sentido para você?',
-    how: 'A Ávrio monta o sistema do conteúdo ao atendimento: uma página de vendas do seu nicho, um assistente com IA que atende 24h, e, se quiser, reels com avatar e anúncios. Em uma conversa de 10 minutos eu te mostro ao vivo. Quer ver?',
+    how: 'A Ávrio cuida de todo o caminho do cliente: ser encontrado (conteúdo e anúncios), uma página que converte, atendimento imediato 24h com IA e acompanhamento dos contatos. O objetivo é o seu negócio atrair mais clientes e perder menos vendas. Em 10 minutos o Gabriel te mostra ao vivo. Quer ver?',
     custom: 'Claro! Se o seu projeto é diferente dos planos, mais simples ou mais completo, o Gabriel monta uma proposta personalizada. Vou abrir o formulário para ele entender o que você precisa.',
   };
   function renderQr(offerForm) {
@@ -71,7 +71,7 @@
     win.classList.add('open'); win.classList.remove('min'); fab.setAttribute('aria-expanded', 'true'); open = true; min = false; tease.classList.remove('show'); sync(); save();
     if (!started) {
       started = true;
-      botSay('Olá! Sou o assistente virtual da Ávrio, uma inteligência artificial. Posso explicar os planos, como funciona e te ajudar a marcar uma conversa de 10 minutos com o Gabriel.', renderQr);
+      botSay('Olá! Sou o assistente virtual da Ávrio, uma inteligência artificial. Posso mostrar como o seu negócio pode atrair mais clientes e perder menos vendas, explicar os planos e marcar uma conversa de 10 minutos com o Gabriel.', renderQr);
     }
     body.scrollTop = body.scrollHeight;
   }

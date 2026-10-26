@@ -176,9 +176,10 @@
     const first = (d.nome || '').split(' ')[0];
     const lines = [
       'Olá! Sou ' + (d.nome || first) + '.',
-      'Vim pelo site da Ávrio e quero saber mais sobre os planos de site, conteúdo e tráfego.',
+      'Vim pelo site da Ávrio e quero atrair mais clientes para o meu negócio. Quero entender qual plano combina comigo.',
       d.nicho ? 'Área: ' + d.nicho + '.' : '',
       d.instagram && d.instagram !== 'Sem Instagram' ? 'Instagram: ' + d.instagram + '.' : '',
+      d.situacao ? 'Hoje meus clientes chegam: ' + d.situacao.toLowerCase() + '.' : '',
       d.prazo ? 'Quero começar: ' + d.prazo.toLowerCase() + '.' : ''
     ].filter(Boolean);
     return lines.join('\n');

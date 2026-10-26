@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Demonstração de site para loja virtual · Agência Ávrio</title>
+<meta name="description" content="Veja como ficaria o site do seu consultório, com agendamento e atendimento automático. Demonstração criada pela Agência Ávrio.">
+<meta property="og:title" content="Demonstração de site para loja virtual · Agência Ávrio">
+<meta property="og:description" content="Veja como ficaria o site do seu consultório, com agendamento e atendimento automático.">
+<meta name="theme-color" content="#FF5A3C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../base.css?v=202610261019">
+<link rel="stylesheet" href="../loja.css?v=202610261019">
+<style>:root{--bg:#FFF8F1;--surface:#FFFFFF;--surface-2:#FFEBDD;--ink:#1A1722;--muted:#6B6676;--primary:#FF5A3C;--primary-2:#D63E22;--on-primary:#FFFFFF;--glow:rgba(255,90,60,.22);--line:rgba(26,23,34,.10);--line-2:rgba(26,23,34,.20);--font-h:'Bricolage Grotesque',system-ui,sans-serif;--font-b:'Inter',system-ui,sans-serif;--hw:700;--btn-r:999px;--radius:20px;}</style>
+</head>
+<body class="lay-loja">
+<div class="ribbon" id="ribbon">
+  <span>Demonstração criada pela <b>Ávrio</b> para <b data-bind="biz">Casa Bella Store</b> · textos e imagens de exemplo</span>
+  <a class="ribbon-btn" id="ribbonCta" href="#" target="_blank" rel="noopener">Quero este site</a>
+  <button type="button" id="ribbonX" aria-label="Fechar aviso">×</button>
+</div>
+
+<div class="lj-ann">* Frete grátis em compras acima de um valor mínimo (exemplo para esta demonstração)</div>
+<header class="lj-head"><div class="wrap">
+  <a class="logo" href="#topo"><span class="mk"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M3 4h2.5l2.2 11h10.6l2-8H6.4"/></svg></span><span data-bind="biz">Casa Bella Store</span></a>
+  <nav class="nav lj-nav" id="nav"><a href="#produtos">Produtos</a><a href="#beneficios">Vantagens</a><a href="#como">Como comprar</a><a href="#duvidas">Dúvidas</a></nav>
+  <button type="button" class="lj-cartbtn" id="ljOpen" aria-label="Abrir carrinho"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M3 4h2.5l2.2 11h10.6l2-8H6.4"/></svg><span id="ljCount">0</span></button><button type="button" class="burger" id="burger" aria-label="Abrir menu"><svg class="ico" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+<main id="topo">
+<section class="lj-hero"><div class="wrap lj-hero-in">
+  <div class="lj-copy rv">
+    <span class="eyebrow">Nova loja online · <span data-bind="city">sua cidade</span></span>
+    <h1>A sua loja <em>aberta 24 horas.</em></h1>
+    <p class="lead">Seus produtos vendendo pela internet, com atendimento no WhatsApp e pedido em poucos toques.</p>
+    <div class="lj-actions"><a class="btn btn-p" href="#produtos">Ver produtos <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button type="button" class="btn btn-g" data-book="">Falar no WhatsApp</button></div>
+    <div class="lj-chips"><span class="chip"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 6h11v10H2zM13 10h4l3 3v3h-7zM6 19a1.6 1.6 0 100-3.200 1.600 1.600 0 000 3.200zM17 19a1.6 1.6 0 100-3.200 1.600 1.600 0 000 3.200z"/></svg>Entrega para todo o Brasil</span><span class="chip"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg>Compra segura</span><span class="chip"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>Atendimento no WhatsApp</span></div>
+  </div>
+  <div class="lj-photo rv"><img src="../img/lj-1.jpg" alt="Loja de exemplo" loading="lazy" decoding="async"><div class="lj-tag"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.3"/></svg><span><b>Novidades da semana</b>peças de exemplo</span></div></div>
+</div></section>
+<section class="lj-cats"><div class="wrap"><span class="lj-cat"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>Mais vendidos</span><span class="lj-cat"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.3"/></svg>Novidades</span><span class="lj-cat"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7l9-4 9 4-9 4zM3 7v10l9 4 9-4V7M12 11v10"/></svg>Kits</span><span class="lj-cat"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-6h4v6"/></svg>Casa</span><span class="lj-cat"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 6h11v10H2zM13 10h4l3 3v3h-7zM6 19a1.6 1.6 0 100-3.200 1.600 1.600 0 000 3.200zM17 19a1.6 1.6 0 100-3.200 1.600 1.600 0 000 3.200z"/></svg>Frete grátis*</span></div></section>
+<section class="sec" id="produtos"><div class="wrap">
+  <div class="lj-sh rv"><span class="eyebrow">Produtos</span><h2>Escolha, adicione e finalize</h2><p>Produtos e preços de exemplo. Clique em adicionar e veja o carrinho funcionando.</p></div>
+  <div class="lj-grid"><article class="lj-p rv"><div class="art" style="background:#FFD9C9"><img src="../img/lj-3.jpg" alt="Vaso de cerâmica" loading="lazy" decoding="async"><span class="tg">Exemplo</span></div><h3>Vaso de cerâmica</h3><div class="row"><b>R$ 89,90</b><button type="button" class="lj-add" data-add="Vaso de cerâmica|R$ 89,90">Adicionar</button></div></article><article class="lj-p rv"><div class="art" style="background:#E6DFFF"><span class="lj-gl"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7l9-4 9 4-9 4zM3 7v10l9 4 9-4V7M12 11v10"/></svg></span><span class="tg">Exemplo</span></div><h3>Kit manta e almofada</h3><div class="row"><b>R$ 149,90</b><button type="button" class="lj-add" data-add="Kit manta e almofada|R$ 149,90">Adicionar</button></div></article><article class="lj-p rv"><div class="art" style="background:#FFF0B8"><img src="../img/lj-3.jpg" alt="Bolsa amarela" loading="lazy" decoding="async"><span class="tg">Exemplo</span></div><h3>Bolsa amarela</h3><div class="row"><b>R$ 129,00</b><button type="button" class="lj-add" data-add="Bolsa amarela|R$ 129,00">Adicionar</button></div></article><article class="lj-p rv"><div class="art" style="background:#DDF2E6"><img src="../img/lj-4.jpg" alt="Conjunto casual" loading="lazy" decoding="async"><span class="tg">Exemplo</span></div><h3>Conjunto casual</h3><div class="row"><b>R$ 199,90</b><button type="button" class="lj-add" data-add="Conjunto casual|R$ 199,90">Adicionar</button></div></article><article class="lj-p rv"><div class="art" style="background:#FFE0EC"><span class="lj-gl"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7l9-4 9 4-9 4zM3 7v10l9 4 9-4V7M12 11v10"/></svg></span><span class="tg">Exemplo</span></div><h3>Cesto organizador</h3><div class="row"><b>R$ 59,90</b><button type="button" class="lj-add" data-add="Cesto organizador|R$ 59,90">Adicionar</button></div></article><article class="lj-p rv"><div class="art" style="background:#D9ECFF"><span class="lj-gl"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 3L5.5 13H11l-1 8L18.5 10H13z"/></svg></span><span class="tg">Exemplo</span></div><h3>Luminária de mesa</h3><div class="row"><b>R$ 119,90</b><button type="button" class="lj-add" data-add="Luminária de mesa|R$ 119,90">Adicionar</button></div></article><article class="lj-p rv"><div class="art" style="background:#FFE7D1"><img src="../img/lj-2.jpg" alt="Camiseta básica" loading="lazy" decoding="async"><span class="tg">Exemplo</span></div><h3>Camiseta básica</h3><div class="row"><b>R$ 69,90</b><button type="button" class="lj-add" data-add="Camiseta básica|R$ 69,90">Adicionar</button></div></article><article class="lj-p rv"><div class="art" style="background:#EFE3D6"><span class="lj-gl"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-6h4v6"/></svg></span><span class="tg">Exemplo</span></div><h3>Porta-retratos</h3><div class="row"><b>R$ 39,90</b><button type="button" class="lj-add" data-add="Porta-retratos|R$ 39,90">Adicionar</button></div></article></div>
+</div></section>
+<section class="lj-ben" id="beneficios"><div class="wrap"><div><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 6h11v10H2zM13 10h4l3 3v3h-7zM6 19a1.6 1.6 0 100-3.200 1.600 1.600 0 000 3.200zM17 19a1.6 1.6 0 100-3.200 1.600 1.600 0 000 3.200z"/></svg><b>Entrega para todo o Brasil</b><span>frete e prazo calculados no pedido</span></div><div><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg><b>Compra segura</b><span>pagamento confirmado antes do envio</span></div><div><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg><b>Atendimento no WhatsApp</b><span>uma pessoa assume quando precisar</span></div><div><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>Loja aberta 24h</b><span>pedido entra a qualquer hora</span></div></div></section>
+<section class="sec" id="como"><div class="wrap">
+  <div class="lj-sh rv"><span class="eyebrow">Como comprar</span><h2>Do carrinho à porta de casa</h2></div>
+  <ol class="lj-steps"><li class="rv"><i>01</i><h3>Escolha</h3><p>Navegue e adicione ao carrinho.</p></li><li class="rv"><i>02</i><h3>Confirme</h3><p>Revise o pedido e escolha o envio.</p></li><li class="rv"><i>03</i><h3>Pague</h3><p>Pagamento seguro e confirmação.</p></li><li class="rv"><i>04</i><h3>Receba</h3><p>Acompanhe a entrega até você.</p></li></ol>
+</div></section>
+<section class="sec lj-alt" id="sobre"><div class="wrap lj-about rv">
+  <div><span class="eyebrow">Sobre</span><h2>Uma loja que atende de verdade</h2><p>Você compra pela internet e fala com uma pessoa quando precisar, pelo WhatsApp.</p><p>Mesmo fora do horário da loja física, o pedido entra e o assistente responde na hora.</p><div class="lj-creds"><span class="cred"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 6h11v10H2zM13 10h4l3 3v3h-7zM6 19a1.6 1.6 0 100-3.200 1.600 1.600 0 000 3.200zM17 19a1.6 1.6 0 100-3.200 1.600 1.600 0 000 3.200z"/></svg>Entrega para todo o Brasil</span><span class="cred"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg>Compra segura</span><span class="cred"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>Suporte no WhatsApp</span></div></div>
+</div></section>
+<section class="sec" id="duvidas"><div class="wrap">
+  <div class="lj-sh c rv"><span class="eyebrow">Dúvidas</span><h2>Perguntas frequentes</h2></div>
+  <div class="faq rv"><details><summary>Como faço um pedido?</summary><p>Adicione os produtos ao carrinho e finalize pelo WhatsApp ou pelo pagamento online.</p></details><details><summary>Quais formas de pagamento?</summary><p>As formas de pagamento são informadas no fechamento do pedido.</p></details><details><summary>Vocês entregam na minha cidade?</summary><p>Entregamos para todo o Brasil; prazo e frete são calculados no pedido.</p></details><details><summary>Posso trocar um produto?</summary><p>Sim, conforme a política de trocas da loja, informada no atendimento.</p></details><details><summary>O atendimento é humano?</summary><p>O assistente responde dúvidas rápidas e uma pessoa assume quando necessário.</p></details></div>
+</div></section>
+<section class="lj-cta" id="contato"><div class="wrap rv"><h2>Pronto para comprar?</h2><p>Adicione seus produtos e finalize pelo WhatsApp. É rápido.</p><button type="button" class="btn btn-p" id="ljOpen2">Ver meu carrinho <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M3 4h2.5l2.2 11h10.6l2-8H6.4"/></svg></button></div></section>
+</main>
+<aside class="lj-drawer" id="ljDrawer" aria-hidden="true">
+  <div class="lj-dh"><b>Seu carrinho</b><button type="button" id="ljClose" aria-label="Fechar">×</button></div>
+  <ul id="ljItems" class="lj-items"></ul>
+  <div class="lj-df"><div class="tot"><span>Total (exemplo)</span><b id="ljTotal">R$ 0,00</b></div>
+    <a class="btn btn-p" id="ljCheckout" href="#" target="_blank" rel="noopener">Finalizar pelo WhatsApp</a><small>Demonstração: o pedido seria enviado ao WhatsApp da loja.</small></div>
+</aside>
+<script>
+(function(){
+  var items=[],$=function(s){return document.querySelector(s)};
+  var fmt=function(v){return 'R$ '+v.toFixed(2).replace('.',',')};
+  var val=function(p){return parseFloat(p.replace('R$','').replace('.','').replace(',','.'))};
+  function render(){
+    var ul=$('#ljItems'),t=0;
+    ul.innerHTML=items.length?'':'<li class="empty">Seu carrinho está vazio.</li>';
+    items.forEach(function(it,i){t+=it.v*it.q;var li=document.createElement('li');li.innerHTML='<span><b></b><small></small></span><button type="button" aria-label="Remover">×</button>';
+      li.querySelector('b').textContent=it.n;li.querySelector('small').textContent=it.q+' × '+fmt(it.v);li.querySelector('button').onclick=function(){items.splice(i,1);render()};ul.appendChild(li)});
+    $('#ljCount').textContent=items.reduce(function(a,b){return a+b.q},0);$('#ljTotal').textContent=fmt(t);
+    var tel=window.AVRIO_TEL||'5563984600461';
+    var msg='Olá! Quero fazer este pedido:\n'+items.map(function(it){return '• '+it.q+'x '+it.n+' ('+fmt(it.v)+')'}).join('\n')+'\nTotal: '+fmt(t);
+    $('#ljCheckout').href='https://wa.me/'+tel+'?text='+encodeURIComponent(msg);
+  }
+  function open(o){var d=$('#ljDrawer');d.classList.toggle('open',o);d.setAttribute('aria-hidden',String(!o))}
+  document.querySelectorAll('[data-add]').forEach(function(b){b.addEventListener('click',function(){var p=b.dataset.add.split('|');var f=items.find(function(x){return x.n===p[0]});f?f.q++:items.push({n:p[0],v:val(p[1]),q:1});render();open(true)})});
+  $('#ljOpen').onclick=function(){open(true)};$('#ljOpen2').onclick=function(){open(true)};$('#ljClose').onclick=function(){open(false)};render();
+})();
+</script>
+
+<footer class="ftr"><div class="wrap">
+  <div class="row"><span><b data-bind="biz">Casa Bella Store</b> · CNPJ 00.000.000/0001-00. Produtos, preços e prazos de exemplo; valores, frete e condições são confirmados no fechamento do pedido.</span></div>
+  <div class="row"><span class="credit">Site com agente de atendimento por <a href="https://wa.me/5563984600461" target="_blank" rel="noopener">Agência Ávrio</a></span><span>Política de privacidade</span></div>
+</div></footer>
+
+<button type="button" class="fab" id="fab" aria-label="Abrir assistente de atendimento" aria-expanded="false"><span class="tip">Fale com a gente</span>
+  <svg class="ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.11.56 4.17 1.62 5.98L4 28l7.25-1.9a12.1 12.1 0 0 0 4.79 1c6.64 0 12.04-5.37 12.04-11.97C28.08 8.36 22.68 3 16.04 3Zm0 21.9a10 10 0 0 1-5.1-1.4l-.37-.22-4.3 1.13 1.15-4.17-.24-.38a9.8 9.8 0 0 1-1.5-5.2c0-5.44 4.46-9.87 9.96-9.87 5.5 0 9.96 4.43 9.96 9.87 0 5.44-4.46 9.88-9.96 9.88Zm5.46-7.4c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.63-.93-2.24-.24-.58-.5-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1-1.04 2.46 0 1.45 1.07 2.86 1.22 3.06.15.2 2.1 3.2 5.08 4.48.71.3 1.27.49 1.7.62.72.23 1.37.2 1.88.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg></button>
+<div class="sticky" id="sticky"><button type="button" class="btn btn-p" data-book="">Fazer um pedido <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+
+<section class="chat" id="chat" role="dialog" aria-label="Assistente virtual">
+  <div class="ch-h"><span class="av"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span><div><b>Assistente <span data-bind="biz">Casa Bella Store</span></b><span>Assistente virtual · responde na hora</span></div><button type="button" id="chX" aria-label="Minimizar assistente">&#8211;</button></div>
+  <div class="ch-b" id="chBody"></div>
+  <div class="qr" id="chQr"></div>
+  <form class="ch-in" id="chForm" hidden><input id="chInput" type="text" maxlength="300" placeholder="Digite sua dúvida..." autocomplete="off" aria-label="Digite sua dúvida"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+  <div class="ch-f">Demonstração do assistente com IA da Ávrio</div>
+</section>
+
+<div class="ov" id="ov" hidden>
+  <div class="mdl" role="dialog" aria-modal="true" aria-label="Agendamento">
+    <button type="button" class="x" id="mx" aria-label="Fechar">×</button>
+    <div class="bar"><i id="mbar"></i></div>
+    <div class="stp" id="mstp">Passo 1 de 3</div>
+    <div class="pane">
+      <h3>O que você gostaria de agendar?</h3>
+      <p class="sub">Escolha uma opção. Você confirma os detalhes no atendimento.</p>
+      <div class="opts" id="svcOpts"><button type="button" data-v="Novidades">Novidades</button><button type="button" data-v="Mais vendidos">Mais vendidos</button><button type="button" data-v="Kits e combos">Kits e combos</button><button type="button" data-v="Casa e decoração">Casa e decoração</button><button type="button" data-v="Entrega">Entrega</button><button type="button" data-v="Atendimento">Atendimento</button></div>
+    </div>
+    <div class="pane" hidden>
+      <h3>Como podemos te chamar?</h3>
+      <p class="sub">Usamos apenas para entrar em contato sobre o seu agendamento.</p>
+      <label class="fld"><span>Seu nome</span><input id="fName" type="text" placeholder="Nome e sobrenome" autocomplete="name"></label>
+      <label class="fld"><span>WhatsApp (com DDD)</span><input id="fPhone" type="tel" inputmode="tel" placeholder="(00) 00000-0000" autocomplete="tel"></label>
+      <p class="err" role="alert"></p>
+    </div>
+    <div class="pane" hidden>
+      <h3>Qual período é melhor para você?</h3>
+      <p class="sub">Confirmamos o horário exato pelo WhatsApp.</p>
+      <div class="opts one" id="turnOpts"><button type="button" data-v="Manhã">Manhã</button><button type="button" data-v="Tarde">Tarde</button><button type="button" data-v="Noite">Noite</button></div>
+    </div>
+    <div class="pane" hidden>
+      <div class="okc"><svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="26" cy="26" r="24"/><path d="M15 27l8 8 14-16"/></svg></div>
+      <h3 style="text-align:center">Pedido pronto!</h3>
+      <p class="sub" style="text-align:center">Assim a mensagem chegaria no WhatsApp de <b id="doneBiz"></b>:</p>
+      <div class="wa-prev" id="prev">x<small>agora · mensagem automática</small></div>
+      <a class="btn btn-p" id="doneGo" href="#" target="_blank" rel="noopener" style="width:100%">Continuar</a>
+      <p class="note" id="doneNote"></p>
+    </div>
+    <div class="mnav" id="mnav" hidden>
+      <button type="button" class="back" id="mback">← Voltar</button>
+      <button type="button" class="btn btn-p btn-sm" id="mnext">Continuar</button>
+    </div>
+  </div>
+</div>
+
+<script>window.NICHE={"slug": "loja", "biz": "Casa Bella Store", "pro": "Casa Bella", "city": "sua cidade", "label": "loja virtual", "titleTail": "Loja online", "chat": {"hello": "Olá! Sou o assistente virtual da {biz}. Posso ajudar com produtos, pedidos e entrega.", "disclaimer": "Sou uma IA e não finalizo pagamentos. Uma pessoa confirma valores, estoque e frete.", "menu": [{"label": "Horários", "answer": "A loja online funciona 24h. O atendimento humano é de segunda a sábado, das 9h às 18h."}, {"label": "Serviços", "answer": "Novidades, mais vendidos, kits e combos, casa e decoração, com entrega para todo o Brasil."}, {"label": "Valores", "answer": "Preços e frete aparecem no carrinho e são confirmados no pedido. Quer fazer um pedido?"}, {"label": "Agendar", "action": "book"}, {"label": "Falar com atendente", "action": "human"}]}};window.AVRIO_CHAT_URL="https://avrio-chat.avrio-chat.workers.dev";</script>
+<script src="../demo.js?v=202610261019"></script>
+<script src="../layouts.js?v=202610261019"></script>
+</body>
+</html>

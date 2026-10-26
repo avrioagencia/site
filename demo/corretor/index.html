@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Demonstração de site para corretagem · Agência Ávrio</title>
+<meta name="description" content="Veja como ficaria o site do seu consultório, com agendamento e atendimento automático. Demonstração criada pela Agência Ávrio.">
+<meta property="og:title" content="Demonstração de site para corretagem · Agência Ávrio">
+<meta property="og:description" content="Veja como ficaria o site do seu consultório, com agendamento e atendimento automático.">
+<meta name="theme-color" content="#0E6B5C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../base.css?v=202610261019">
+<link rel="stylesheet" href="../corretor.css?v=202610261019">
+<style>:root{--bg:#FAF7F2;--surface:#FFFFFF;--surface-2:#F1EBE0;--ink:#1B2A2F;--muted:#5B6B70;--primary:#0E6B5C;--primary-2:#094A40;--on-primary:#FFFFFF;--glow:rgba(14,107,92,.22);--line:rgba(27,42,47,.10);--line-2:rgba(27,42,47,.20);--font-h:'DM Serif Display',Georgia,serif;--font-b:'DM Sans',system-ui,sans-serif;--hw:400;--btn-r:999px;--radius:22px;}</style>
+</head>
+<body class="lay-corretor">
+<div class="ribbon" id="ribbon">
+  <span>Demonstração criada pela <b>Ávrio</b> para <b data-bind="biz">Lar Certo Imóveis</b> · textos e imagens de exemplo</span>
+  <a class="ribbon-btn" id="ribbonCta" href="#" target="_blank" rel="noopener">Quero este site</a>
+  <button type="button" id="ribbonX" aria-label="Fechar aviso">×</button>
+</div>
+
+<header class="cr-head"><div class="wrap">
+  <a class="logo" href="#topo"><span class="mk"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3M14 9l2 2"/></svg></span><span data-bind="biz">Lar Certo Imóveis</span></a>
+  <nav class="nav cr-nav" id="nav"><a href="#imoveis">Imóveis</a><a href="#servicos">Serviços</a><a href="#como">Como funciona</a><a href="#sobre">Sobre</a><a href="#duvidas">Dúvidas</a></nav>
+  <button type="button" class="btn btn-p btn-sm" data-book="">Falar com o corretor</button><button type="button" class="burger" id="burger" aria-label="Abrir menu"><svg class="ico" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+<main id="topo">
+<section class="cr-hero"><div class="wrap cr-hero-in">
+  <div class="cr-copy rv">
+    <span class="eyebrow">Corretor de imóveis · <span data-bind="city">sua cidade</span></span>
+    <h1>Encontre o imóvel certo, <em>sem perder tempo.</em></h1>
+    <p class="lead">Compra, venda e locação com acompanhamento de ponta a ponta e resposta rápida para cada interessado.</p>
+    <div class="cr-search" data-cr>
+      <label><span>O que você precisa?</span><select id="crSel" aria-label="O que você precisa"><option>Quero comprar</option><option>Quero alugar</option><option>Quero vender o meu imóvel</option><option>Quero avaliar o meu imóvel</option><option>Quero cotar um seguro</option></select></label>
+      <button type="button" class="btn btn-p" data-cr-go>Falar com o corretor <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+    <div class="cr-chips"><span class="chip"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg>CRECI 00000</span><span class="chip"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Resposta rápida</span><span class="chip"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-6h4v6"/></svg>Acompanhamento completo</span></div>
+  </div>
+  <div class="cr-photo rv"><img src="../img/cr-1.jpg" alt="Casa moderna de exemplo" loading="lazy" decoding="async"><div class="cr-badge"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Retorno rápido</b>cada interessado é respondido</span></div></div>
+</div></section>
+<section class="sec" id="imoveis"><div class="wrap">
+  <div class="cr-sh rv"><span class="eyebrow">Imóveis em destaque</span><h2>Alguns exemplos do que você encontra aqui</h2><p>Imóveis e valores de exemplo para esta demonstração.</p></div>
+  <div class="cr-grid3"><article class="cr-house rv"><div class="ph"><img src="../img/cr-2.jpg" alt="Imóvel de exemplo" loading="lazy" decoding="async"><span class="tg">Exemplo</span></div><div class="bd"><h3>Casa com quintal</h3><p>3 quartos · 2 vagas · quintal</p><small><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.8 7-11a7 7 0 10-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Bairro Jardim</small><div class="ft"><b>Sob consulta</b><button type="button" class="cr-link" data-book="Visita: Casa com quintal">Quero visitar</button></div></div></article><article class="cr-house rv"><div class="ph"><img src="../img/cr-3.jpg" alt="Imóvel de exemplo" loading="lazy" decoding="async"><span class="tg">Exemplo</span></div><div class="bd"><h3>Sobrado moderno</h3><p>4 quartos · 1 suíte · varanda</p><small><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.8 7-11a7 7 0 10-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Setor Central</small><div class="ft"><b>Sob consulta</b><button type="button" class="cr-link" data-book="Visita: Sobrado moderno">Quero visitar</button></div></div></article><article class="cr-house rv"><div class="ph"><img src="../img/cr-4.jpg" alt="Imóvel de exemplo" loading="lazy" decoding="async"><span class="tg">Exemplo</span></div><div class="bd"><h3>Casa térrea reformada</h3><p>3 quartos · churrasqueira</p><small><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.8 7-11a7 7 0 10-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg> Bairro Alto</small><div class="ft"><b>Sob consulta</b><button type="button" class="cr-link" data-book="Visita: Casa térrea reformada">Quero visitar</button></div></div></article></div>
+</div></section>
+<section class="sec cr-alt" id="servicos"><div class="wrap">
+  <div class="cr-sh rv"><span class="eyebrow">Serviços</span><h2>Do primeiro contato às chaves</h2><p>Cada etapa explicada, sem surpresa.</p></div>
+  <div class="cr-grid3"><article class="cr-card rv"><span class="cr-ic"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 11l8-7 8 7v9H4z"/><path d="M10 20v-6h4v6"/></svg></span><h3>Comprar um imóvel</h3><p>Busca guiada de acordo com o seu perfil e orçamento.</p><button type="button" class="cr-link" data-book="Comprar um imóvel">Quero saber mais</button></article><article class="cr-card rv"><span class="cr-ic"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3M14 9l2 2"/></svg></span><h3>Vender com segurança</h3><p>Avaliação, divulgação e negociação acompanhadas.</p><button type="button" class="cr-link" data-book="Vender com segurança">Quero saber mais</button></article><article class="cr-card rv"><span class="cr-ic"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s7-5.8 7-11a7 7 0 10-14 0c0 5.2 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><h3>Alugar</h3><p>Imóveis para locação e apoio na documentação.</p><button type="button" class="cr-link" data-book="Alugar">Quero saber mais</button></article><article class="cr-card rv"><span class="cr-ic"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg></span><h3>Avaliação do imóvel</h3><p>Estimativa baseada no mercado da região.</p><button type="button" class="cr-link" data-book="Avaliação do imóvel">Quero saber mais</button></article><article class="cr-card rv"><span class="cr-ic"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5h6v2M3 13h18"/></svg></span><h3>Financiamento</h3><p>Simulação e orientação sobre as etapas.</p><button type="button" class="cr-link" data-book="Financiamento">Quero saber mais</button></article><article class="cr-card rv"><span class="cr-ic"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg></span><h3>Seguros</h3><p>Seguro residencial e de vida, com cotação rápida.</p><button type="button" class="cr-link" data-book="Seguros">Quero saber mais</button></article></div>
+</div></section>
+<section class="sec" id="como"><div class="wrap">
+  <div class="cr-sh rv"><span class="eyebrow">Como funciona</span><h2>Quatro passos, sem surpresa</h2></div>
+  <ol class="cr-steps"><li class="rv"><i>01</i><h3>Conversa inicial</h3><p>Entendo o que você procura ou quer vender.</p></li><li class="rv"><i>02</i><h3>Seleção ou avaliação</h3><p>Imóveis filtrados para você ou avaliação do seu.</p></li><li class="rv"><i>03</i><h3>Visitas e proposta</h3><p>Visita agendada e negociação acompanhada.</p></li><li class="rv"><i>04</i><h3>Fechamento</h3><p>Documentação e entrega das chaves.</p></li></ol>
+</div></section>
+<section class="sec cr-alt" id="sobre"><div class="wrap cr-about rv">
+  <div class="cr-portrait" role="img" aria-label="Foto do corretor (espaço reservado)"><span data-bind="initial">A</span><small>foto do corretor</small></div>
+  <div><span class="eyebrow">Sobre</span><h2>Quem vai cuidar do seu negócio</h2><p><span data-bind="pro">Marcos Teixeira</span> atende com transparência: você sabe cada etapa e cada custo antes de decidir.</p><p>Foco em ouvir o que você precisa e responder rápido, para nenhum interessado esperar.</p><div class="cr-creds"><span class="cred"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5L15.5 10"/></svg>CRECI 00000</span><span class="cred"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg>Documentação conferida</span><span class="cred"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Retorno rápido</span></div><button type="button" class="btn btn-p" data-book="">Falar com o corretor <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+</div></section>
+<section class="sec g-sec" id="gSec" hidden>
+  <div class="wrap"><div class="g-card rv">
+    <div><div class="g-num" id="gNum">5,0</div><div class="g-stars" aria-label="Nota no Google"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div></div>
+    <div class="g-txt"><h3 style="font-size:24px">Avaliado no Google</h3><p id="gTxt">Avaliações reais de quem já foi atendido.</p>
+    <a class="btn btn-g btn-sm" href="#" target="_blank" rel="noopener">Ver avaliações no Google</a></div>
+  </div></div>
+</section>
+<section class="sec" id="duvidas"><div class="wrap">
+  <div class="cr-sh c rv"><span class="eyebrow">Dúvidas</span><h2>Perguntas frequentes</h2></div>
+  <div class="faq rv"><details><summary>Como funciona a visita?</summary><p>Você escolhe o imóvel, combinamos dia e horário e acompanho a visita.</p></details><details><summary>Vocês avaliam o meu imóvel?</summary><p>Sim. A avaliação considera o mercado da região e as características do imóvel.</p></details><details><summary>Ajuda com financiamento?</summary><p>Sim, com simulação e orientação sobre documentos e etapas.</p></details><details><summary>Trabalha com seguros?</summary><p>Sim. Posso cotar seguro residencial e de vida para você.</p></details><details><summary>Os valores dos imóveis mudam?</summary><p>Sim. Os valores e a disponibilidade são confirmados no atendimento.</p></details></div>
+</div></section>
+<section class="cr-cta" id="contato"><div class="wrap rv"><h2>Qual imóvel você procura?</h2><p>Fale com o corretor pelo WhatsApp. A resposta é rápida.</p><button type="button" class="btn btn-p" data-book="">Falar com o corretor <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></section>
+</main>
+<script>(function(){var b=document.querySelector('[data-cr-go]');if(b)b.addEventListener('click',function(){window.AvrioBook&&window.AvrioBook(document.getElementById('crSel').value)})})();</script>
+
+<footer class="ftr"><div class="wrap">
+  <div class="row"><span><b data-bind="biz">Lar Certo Imóveis</b> · Responsável: <span data-bind="pro">Marcos Teixeira</span> · CRECI 00000. Imóveis, valores e condições de exemplo; consulte disponibilidade e condições no atendimento.</span></div>
+  <div class="row"><span class="credit">Site com agente de atendimento por <a href="https://wa.me/5563984600461" target="_blank" rel="noopener">Agência Ávrio</a></span><span>Política de privacidade</span></div>
+</div></footer>
+
+<button type="button" class="fab" id="fab" aria-label="Abrir assistente de atendimento" aria-expanded="false"><span class="tip">Fale com a gente</span>
+  <svg class="ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.36 4 14.97c0 2.11.56 4.17 1.62 5.98L4 28l7.25-1.9a12.1 12.1 0 0 0 4.79 1c6.64 0 12.04-5.37 12.04-11.97C28.08 8.36 22.68 3 16.04 3Zm0 21.9a10 10 0 0 1-5.1-1.4l-.37-.22-4.3 1.13 1.15-4.17-.24-.38a9.8 9.8 0 0 1-1.5-5.2c0-5.44 4.46-9.87 9.96-9.87 5.5 0 9.96 4.43 9.96 9.87 0 5.44-4.46 9.88-9.96 9.88Zm5.46-7.4c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.63-.93-2.24-.24-.58-.5-.5-.68-.5h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1-1.04 2.46 0 1.45 1.07 2.86 1.22 3.06.15.2 2.1 3.2 5.08 4.48.71.3 1.27.49 1.7.62.72.23 1.37.2 1.88.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg></button>
+<div class="sticky" id="sticky"><button type="button" class="btn btn-p" data-book="">Falar com o corretor <svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+
+<section class="chat" id="chat" role="dialog" aria-label="Assistente virtual">
+  <div class="ch-h"><span class="av"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span><div><b>Assistente <span data-bind="biz">Lar Certo Imóveis</span></b><span>Assistente virtual · responde na hora</span></div><button type="button" id="chX" aria-label="Minimizar assistente">&#8211;</button></div>
+  <div class="ch-b" id="chBody"></div>
+  <div class="qr" id="chQr"></div>
+  <form class="ch-in" id="chForm" hidden><input id="chInput" type="text" maxlength="300" placeholder="Digite sua dúvida..." autocomplete="off" aria-label="Digite sua dúvida"><button type="submit" aria-label="Enviar">&#10148;</button></form>
+  <div class="ch-f">Demonstração do assistente com IA da Ávrio</div>
+</section>
+
+<div class="ov" id="ov" hidden>
+  <div class="mdl" role="dialog" aria-modal="true" aria-label="Agendamento">
+    <button type="button" class="x" id="mx" aria-label="Fechar">×</button>
+    <div class="bar"><i id="mbar"></i></div>
+    <div class="stp" id="mstp">Passo 1 de 3</div>
+    <div class="pane">
+      <h3>O que você gostaria de agendar?</h3>
+      <p class="sub">Escolha uma opção. Você confirma os detalhes no atendimento.</p>
+      <div class="opts" id="svcOpts"><button type="button" data-v="Comprar um imóvel">Comprar um imóvel</button><button type="button" data-v="Vender com segurança">Vender com segurança</button><button type="button" data-v="Alugar">Alugar</button><button type="button" data-v="Avaliação do imóvel">Avaliação do imóvel</button><button type="button" data-v="Financiamento">Financiamento</button><button type="button" data-v="Seguros">Seguros</button></div>
+    </div>
+    <div class="pane" hidden>
+      <h3>Como podemos te chamar?</h3>
+      <p class="sub">Usamos apenas para entrar em contato sobre o seu agendamento.</p>
+      <label class="fld"><span>Seu nome</span><input id="fName" type="text" placeholder="Nome e sobrenome" autocomplete="name"></label>
+      <label class="fld"><span>WhatsApp (com DDD)</span><input id="fPhone" type="tel" inputmode="tel" placeholder="(00) 00000-0000" autocomplete="tel"></label>
+      <p class="err" role="alert"></p>
+    </div>
+    <div class="pane" hidden>
+      <h3>Qual período é melhor para você?</h3>
+      <p class="sub">Confirmamos o horário exato pelo WhatsApp.</p>
+      <div class="opts one" id="turnOpts"><button type="button" data-v="Manhã">Manhã</button><button type="button" data-v="Tarde">Tarde</button><button type="button" data-v="Noite">Noite</button></div>
+    </div>
+    <div class="pane" hidden>
+      <div class="okc"><svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="26" cy="26" r="24"/><path d="M15 27l8 8 14-16"/></svg></div>
+      <h3 style="text-align:center">Pedido pronto!</h3>
+      <p class="sub" style="text-align:center">Assim a mensagem chegaria no WhatsApp de <b id="doneBiz"></b>:</p>
+      <div class="wa-prev" id="prev">x<small>agora · mensagem automática</small></div>
+      <a class="btn btn-p" id="doneGo" href="#" target="_blank" rel="noopener" style="width:100%">Continuar</a>
+      <p class="note" id="doneNote"></p>
+    </div>
+    <div class="mnav" id="mnav" hidden>
+      <button type="button" class="back" id="mback">← Voltar</button>
+      <button type="button" class="btn btn-p btn-sm" id="mnext">Continuar</button>
+    </div>
+  </div>
+</div>
+
+<script>window.NICHE={"slug": "corretor", "biz": "Lar Certo Imóveis", "pro": "Marcos Teixeira", "city": "sua cidade", "label": "corretagem", "titleTail": "Corretor de imóveis", "chat": {"hello": "Olá! Sou o assistente virtual do {biz}. Posso ajudar com imóveis, visitas e atendimento.", "disclaimer": "Sou uma IA e não faço avaliação nem fechamento de negócio. O corretor confirma valores e condições.", "menu": [{"label": "Horários", "answer": "Atendemos de segunda a sábado, das 8h às 19h. Quer agendar uma visita?"}, {"label": "Serviços", "answer": "Compra, venda, locação, avaliação, financiamento e seguros."}, {"label": "Valores", "answer": "Os valores dos imóveis e das comissões são informados no atendimento. Posso marcar uma conversa?"}, {"label": "Agendar", "action": "book"}, {"label": "Falar com atendente", "action": "human"}]}};window.AVRIO_CHAT_URL="https://avrio-chat.avrio-chat.workers.dev";</script>
+<script src="../demo.js?v=202610261019"></script>
+<script src="../layouts.js?v=202610261019"></script>
+</body>
+</html>
