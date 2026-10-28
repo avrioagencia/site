@@ -135,13 +135,19 @@ details p{padding:0 24px 22px;color:var(--muted);font-size:16.5px}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.fab::before{animation:none}.pane,.msg{animation:none}}
 
 @media (max-width:860px){
-  .nav{display:none}
+  .nav:not(.open){display:none}
   .nav.open{display:flex;flex-direction:column;align-items:stretch;gap:2px;position:absolute;top:100%;left:0;right:0;background:var(--bg);padding:14px 20px 20px;border-bottom:1px solid var(--line-2);z-index:50;text-transform:none;letter-spacing:0}
   .nav.open a,.nav.open button{padding:12px 4px;font-size:17px;text-align:left}
 }
 @media (max-width:760px){
   body{font-size:16.5px}
-  .burger{display:grid}
+  .burger{display:grid;flex-shrink:0}
+  html,body{overflow-x:clip}
+  main :is(div,article,section,figure,ul){min-width:0}
+  main .btn{white-space:normal;text-align:center}
+  header .wrap>.logo{min-width:0}
+  header .wrap>.logo span:last-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  header .wrap>.btn,header .wrap>.pe-cta,header .wrap>.ps-cta{flex-shrink:0;padding:10px 14px;font-size:13px;letter-spacing:0}
   .opts{grid-template-columns:1fr}
   .sticky{display:block}
   .fab{right:14px;bottom:16px;width:58px;height:58px}

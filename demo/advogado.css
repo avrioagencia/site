@@ -80,13 +80,13 @@
 .ad-info b{display:block}
 
 @media (max-width:980px){
-  .ad-hero .wrap,.ad-about,.ad-cta .wrap{grid-template-columns:1fr}
+  .ad-hero .wrap,.ad-about,.ad-cta .wrap{grid-template-columns:minmax(0,1fr)}
   .ad-princ .wrap{grid-template-columns:repeat(2,1fr)}
   .ad-princ div:nth-child(3){border-left:none}
-  .ad-acc{grid-template-columns:1fr}
-  .ad-steps{grid-template-columns:1fr}
+  .ad-acc{grid-template-columns:minmax(0,1fr)}
+  .ad-steps{grid-template-columns:minmax(0,1fr)}
   .ad-steps::before{display:none}
-  .ad-info{grid-template-columns:1fr}
+  .ad-info{grid-template-columns:minmax(0,1fr)}
   .ad-mono{max-width:360px}
 }
 @media (max-width:760px){

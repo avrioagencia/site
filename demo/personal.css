@@ -91,14 +91,14 @@
   .pe-tile:nth-child(2n){border-right:none}
   .pe-tile:nth-last-child(-n+3){border-bottom:1px solid var(--line-2)}
   .pe-tile:nth-last-child(-n+2){border-bottom:none}
-  .pe-builder,.pe-about{grid-template-columns:1fr}
+  .pe-builder,.pe-about{grid-template-columns:minmax(0,1fr)}
   .pe-photo{max-width:320px}
 }
 @media (max-width:760px){
   .pe-head .nav{display:none}
   .pe-head .nav.open{display:flex}
   .pe-cta{padding:11px 16px;font-size:12px}
-  .pe-tiles{grid-template-columns:1fr}
+  .pe-tiles{grid-template-columns:minmax(0,1fr)}
   .pe-tile{border-right:none!important;border-bottom:1px solid var(--line-2)!important;min-height:0}
   .pe-tile:last-child{border-bottom:none!important}
   .pe-row{grid-template-columns:70px 1fr;gap:14px}

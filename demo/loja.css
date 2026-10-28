@@ -58,4 +58,4 @@
 .lj-df{padding:16px 20px 22px;border-top:1px solid var(--line);display:grid;gap:10px}
 .lj-df .tot{display:flex;justify-content:space-between;font-size:17px}.lj-df small{color:var(--muted);text-align:center;font-size:12px}
 @media (max-width:980px){.lj-hero-in{grid-template-columns:1fr}.lj-grid{grid-template-columns:repeat(2,1fr)}.lj-ben .wrap{grid-template-columns:1fr 1fr}.lj-steps{grid-template-columns:1fr 1fr}.lj-photo{max-height:380px;aspect-ratio:4/3}}
-@media (max-width:560px){.lj-grid,.lj-steps{grid-template-columns:1fr 1fr}.lj-ben .wrap{grid-template-columns:1fr}.lj-head .wrap{height:62px}}
+@media (max-width:560px){.lj-grid,.lj-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.lj-p{min-width:0;padding:10px}.lj-p .row{flex-wrap:wrap}.lj-p h3{font-size:15px}.lj-ben .wrap{grid-template-columns:1fr}.lj-head .wrap{height:62px}}
