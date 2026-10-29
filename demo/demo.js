@@ -31,6 +31,24 @@
     const gs = $('#gSec'); if (gs) gs.hidden = false;
   }
 
+  // ---------- Dados estruturados (o que vai no site entregue) ----------
+  // Monta o JSON-LD do negócio local e das perguntas frequentes com os dados do link. Nesta demonstração a página é noindex; no site final isto fica ativo.
+  (function () {
+    const TYPES = { dentista: 'Dentist', advogado: 'LegalService', corretor: 'RealEstateAgent', imobiliaria: 'RealEstateAgent', construtora: 'GeneralContractor',
+      estetica: 'HealthAndBeautyBusiness', loja: 'Store', nutricionista: 'MedicalBusiness', personal: 'SportsActivityLocation', psicologo: 'MedicalBusiness' };
+    const key = (location.pathname.match(/\/demo\/([a-z-]+)\//) || [])[1] || '';
+    const data = { '@context': 'https://schema.org', '@type': TYPES[key] || 'LocalBusiness', name: biz, areaServed: city || undefined };
+    if (tel) data.telephone = '+' + tel;
+    if (gnum && grev) data.aggregateRating = { '@type': 'AggregateRating', ratingValue: gnum.replace(',', '.'), reviewCount: grev };
+    const faq = $$('details').filter((d) => !d.closest('#chat')).map((d) => {
+      const s = $('summary', d), p = $('p', d);
+      return s && p ? { '@type': 'Question', name: s.textContent.trim(), acceptedAnswer: { '@type': 'Answer', text: p.textContent.trim() } } : null;
+    }).filter(Boolean);
+    const put = (obj) => { const sc = document.createElement('script'); sc.type = 'application/ld+json'; sc.textContent = JSON.stringify(obj); document.head.appendChild(sc); };
+    put(data);
+    if (faq.length) put({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq });
+  })();
+
   // ---------- Ribbon ----------
   const ribbon = $('#ribbon');
   if (!DEMO && ribbon) ribbon.remove();
