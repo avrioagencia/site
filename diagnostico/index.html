@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Diagnóstico rápido de visibilidade local · Agência Ávrio</title>
+<meta name="description" content="Checagem rápida de como o seu negócio aparece no Google, com dados públicos do Google Maps. Criada pela Agência Ávrio.">
+<meta name="theme-color" content="#2a1066">
+<style>
+:root{--bg:#0f0a24;--card:#1a1238;--card2:#241a48;--ink:#f4f1ff;--mu:#b6acdb;--line:rgba(173,150,255,.18);--v:#8f3cfc;--m:#fb3bc9;--ok:#2fd27a;--warn:#f5a524;--bad:#ff5d6c;--grad:linear-gradient(115deg,#5a22f2,#8f3cfc 50%,#fb3bc9)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:16px/1.55 "Manrope","Segoe UI",system-ui,sans-serif;background:radial-gradient(900px 500px at 90% -10%,rgba(143,60,252,.25),transparent 60%),var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+.wrap{width:min(860px,100% - 32px);margin:0 auto;padding:26px 0 60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2em;font-size:13px;margin-bottom:22px}
+.brand i{width:34px;height:34px;border-radius:10px;background:var(--grad);display:grid;place-items:center;font-style:normal;letter-spacing:0;font-size:17px}
+h1{font-size:clamp(24px,5vw,34px);line-height:1.15;letter-spacing:-.01em}
+.sub{color:var(--mu);margin:8px 0 22px}
+.meta{display:inline-block;font-size:12.5px;color:var(--mu);border:1px solid var(--line);border-radius:999px;padding:4px 12px;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:18px 0}
+.card{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:16px;padding:16px}
+.card h3{font-size:13px;text-transform:uppercase;letter-spacing:.09em;color:var(--mu);font-weight:700;margin-bottom:8px}
+.big{font-size:32px;font-weight:800;line-height:1.1}
+.big small{font-size:15px;color:var(--mu);font-weight:600}
+.txt{color:var(--mu);font-size:14.5px;margin-top:6px}
+.tag{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;margin-top:8px}
+.t-ok{background:rgba(47,210,122,.18);color:#9ff0c3}.t-warn{background:rgba(245,165,36,.18);color:#ffd68a}.t-bad{background:rgba(255,93,108,.18);color:#ffb7bf}.t-na{background:rgba(255,255,255,.08);color:var(--mu)}
+h2{font-size:19px;margin:26px 0 10px}
+ul.chk{list-style:none;display:grid;gap:8px}
+ul.chk li{display:grid;grid-template-columns:24px 1fr;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 14px}
+ul.chk b{display:block;font-size:15px}ul.chk span{color:var(--mu);font-size:13.5px}
+.dot{width:20px;height:20px;border-radius:50%;margin-top:2px;display:grid;place-items:center;font-size:12px;font-weight:800;color:#06210f}
+.d-ok{background:var(--ok)}.d-warn{background:var(--warn)}.d-q{background:#8d84b7;color:#1a1238}
+.cta{margin-top:26px;padding:20px;border-radius:18px;border:1px solid var(--line);background:radial-gradient(500px 200px at 100% 0%,rgba(251,59,201,.22),transparent 70%),var(--card)}
+.cta h2{margin-top:0}
+.btn{display:inline-block;margin-top:12px;background:var(--grad);color:#fff;text-decoration:none;font-weight:800;border-radius:12px;padding:13px 20px}
+.note{font-size:12.5px;color:var(--mu);margin-top:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><i>Á</i>ÁVRIO</div>
+  <span class="meta" id="meta"></span>
+  <h1 id="title">Diagnóstico rápido de visibilidade local</h1>
+  <p class="sub" id="sub"></p>
+
+  <div class="grid" id="cards"></div>
+
+  <h2>O que olhamos</h2>
+  <ul class="chk" id="checks"></ul>
+
+  <div class="cta">
+    <h2>O que a Ávrio faz com isso</h2>
+    <p class="txt" style="font-size:15.5px;color:var(--ink)">Organizamos o Perfil no Google, colocamos um site simples que confirma e explica o seu negócio e um atendimento que responde no WhatsApp na hora, inclusive fora do horário. Depois repetimos esta checagem para você ver o <b>antes e depois</b>.</p>
+    <a class="btn" id="cta" href="#" target="_blank" rel="noopener">Quero conversar sobre isso</a>
+  </div>
+  <p class="note" id="note"></p>
+</div>
+<script>
+(function () {
+  'use strict';
+  var AVRIO_WA = '5563984600461';
+  var q = new URLSearchParams(location.search);
+  var clean = function (v, max) { return (v || '').replace(/[<>]/g, '').trim().slice(0, max || 80); };
+  var num = function (v) { var n = parseFloat(String(v || '').replace(',', '.')); return isNaN(n) ? null : n; };
+  var $ = function (s) { return document.querySelector(s); };
+  var biz = clean(q.get('n')) || 'Seu negócio';
+  var city = clean(q.get('cid'));
+  var nz = clean(q.get('nz'), 40);
+  var nota = num(q.get('g'));
+  var rev = num(q.get('r'));
+  var site = q.get('s') === '1';
+  var wa = q.get('w') === '1';
+  var rank = num(q.get('k'));
+  var total = num(q.get('t'));
+  var avg = num(q.get('m'));
+  var dt = clean(q.get('d'), 12);
+
+  document.title = 'Diagnóstico de visibilidade · ' + biz;
+  $('#title').textContent = biz;
+  $('#sub').textContent = 'Checagem rápida de como o negócio aparece no Google' + (city ? ', em ' + city : '') + (nz ? ' (' + nz + ')' : '') + '.';
+  $('#meta').textContent = 'Dados públicos do Google Maps' + (dt ? ' · ' + dt : '');
+
+  var cards = [];
+  if (nota !== null) {
+    var nt = nota >= 4.5 ? ['t-ok', 'Nota forte'] : nota >= 4.0 ? ['t-warn', 'Nota boa, com espaço'] : ['t-bad', 'Nota que pesa contra'];
+    cards.push(['Nota no Google', String(nota).replace('.', ',') + '<small> / 5</small>', 'Pesa na hora do cliente escolher entre dois negócios parecidos.', nt]);
+  }
+  if (rev !== null) {
+    var tag = ['t-na', 'Sem comparação'];
+    var txt = 'Quantidade de avaliações públicas no Perfil.';
+    if (avg !== null && total >= 5) {
+      tag = rev >= avg * 1.2 ? ['t-ok', 'Acima da média'] : rev >= avg * 0.8 ? ['t-warn', 'Na média'] : ['t-bad', 'Abaixo da média'];
+      txt = 'Média dos ' + total + ' negócios parecidos que mapeamos' + (city ? ' em ' + city : '') + ': ' + Math.round(avg) + ' avaliações.';
+    }
+    cards.push(['Avaliações', String(rev), txt, tag]);
+  }
+  if (rank !== null && total >= 5) {
+    cards.push(['Posição por avaliações', rank + 'º<small> de ' + total + '</small>', 'Entre os negócios parecidos que mapeamos (só uma amostra, não é a posição real na busca).', rank <= Math.ceil(total / 3) ? ['t-ok', 'Entre os primeiros'] : rank <= Math.ceil(total * 2 / 3) ? ['t-warn', 'No meio'] : ['t-bad', 'Atrás da maioria']]);
+  }
+  cards.push(['Site próprio', site ? 'Sim' : 'Não achamos', site ? 'Há um site ligado ao Perfil.' : 'Não encontramos um site ligado ao Perfil da empresa.', site ? ['t-ok', 'Presente'] : ['t-bad', 'Ponto de melhoria']]);
+  $('#cards').innerHTML = cards.map(function (c) {
+    return '<div class="card"><h3>' + c[0] + '</h3><div class="big">' + c[1] + '</div><p class="txt">' + c[2] + '</p><span class="tag ' + c[3][0] + '">' + c[3][1] + '</span></div>';
+  }).join('');
+
+  var checks = [
+    [site ? 'ok' : 'warn', 'Site conectado ao Perfil', site ? 'Existe um site. Falta conferir se ele tem texto real, carrega rápido no celular e traz serviços e perguntas frequentes.' : 'Sem site, o Google e a IA têm menos onde confirmar quem é o negócio.'],
+    [wa ? 'ok' : 'warn', 'Contato por WhatsApp', wa ? 'Há um número de celular no Perfil, bom para o cliente chamar na hora.' : 'O telefone cadastrado parece fixo. Um WhatsApp com mensagem pronta facilita o primeiro contato.'],
+    ['q', 'Informações completas do Perfil', 'Categoria, serviços, horário, fotos e descrição. Conferimos juntos no diagnóstico completo.'],
+    ['q', 'Resposta às avaliações', 'Responder as avaliações mostra cuidado e ajuda na escolha. A checagem é feita no Perfil.'],
+    ['q', 'Como aparece quando alguém pergunta ao Google e à IA', 'Testamos perguntas como "melhor ' + (nz || 'serviço') + (city ? ' em ' + city : '') + '" antes e depois, e registramos o resultado.']
+  ];
+  $('#checks').innerHTML = checks.map(function (c) {
+    var cls = c[0] === 'ok' ? 'd-ok' : c[0] === 'warn' ? 'd-warn' : 'd-q';
+    var sym = c[0] === 'ok' ? '✓' : c[0] === 'warn' ? '!' : '?';
+    return '<li><div class="dot ' + cls + '">' + sym + '</div><div><b>' + c[1] + '</b><span>' + c[2] + '</span></div></li>';
+  }).join('');
+
+  $('#cta').href = 'https://wa.me/' + AVRIO_WA + '?text=' + encodeURIComponent('Olá! Vi o diagnóstico de visibilidade de ' + biz + ' e quero conversar.');
+  $('#note').textContent = 'Os dados vêm do perfil público do Google Maps e de uma amostra própria de negócios parecidos; não inclui a posição real nas buscas, que mostramos no diagnóstico completo. Nada aqui é promessa de resultado.';
+})();
+</script>
+</body>
+</html>
